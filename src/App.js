@@ -1,5 +1,4 @@
 import './App.css';
-import './assets/css/bootstrap.css';
 import './assets/css/theme.min.css';
 import MainContent from './Components/MainContent/MainContent';
 

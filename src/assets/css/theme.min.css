@@ -17939,9 +17939,7 @@ html[dir="rtl"] .googlemap .gm-style-iw.gm-style-iw-c button[title="Close"] {
 .star-rating {
     background-image: var(--falcon-star-rating-bg-image) !important;
 }
-.star-rating .star-value {
-    background: url("../img/icons/star_on.svg") !important;
-}
+
 #appCalendar {
     min-height: calc(100vh - 4.3125rem);
 }
