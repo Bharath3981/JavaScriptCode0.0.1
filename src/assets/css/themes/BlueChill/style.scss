@@ -1,0 +1,21 @@
+$theme-light: #f0f8ff;
+$theme-bg: #0c8195;
+$theme-active-text-color: #f1c111;
+
+body {
+    background: $theme-bg;
+}
+.navbar {
+    background-color: $theme-bg;
+    .navbar-nav {
+        .nav-item {
+            .nav-link.active {
+                color: $theme-active-text-color !important;
+            }
+            .nav-link {
+                color: $theme-light;
+            }
+        }
+    }
+    
+}

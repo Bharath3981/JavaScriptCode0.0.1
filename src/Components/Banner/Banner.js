@@ -5,9 +5,8 @@ import { FaSearch } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 
 function Banner( props ) {
-  console.log(props);
   return (
-    <nav className="navbar navbar-light navbar-glass navbar-top navbar-expand">
+    <nav className="navbar navbar-light navbar-top navbar-expand">
         <Button className="navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => props.sharedData.toggleCollpase(!props.sharedData.toggleTopNavBar)} aria-controls="navbarVerticalCollapse" aria-expanded={props.sharedData.toggleTopNavBar}><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></Button>
         <a className="navbar-brand me-1 me-sm-3" href="index.html">
           <div className="d-flex align-items-center"><img className="me-2" src={brandLogoImage} alt="" width="40" /><span className="font-sans-serif">falcon</span></div>
@@ -23,7 +22,7 @@ function Banner( props ) {
         </ul>
         <ul className="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center">
           <li className="nav-item dropdown">
-            <a className="nav-link pe-0" id="navbarDropdownUser" role="button" href="javascript:void(0);" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a className="nav-link pe-0" id="navbarDropdownUser" role="button" href="#!" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div className="avatar avatar-xl">
                 <img className="rounded-circle" src="" alt="" />
               </div>

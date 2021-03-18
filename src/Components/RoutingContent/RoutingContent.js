@@ -1,4 +1,4 @@
-
+import DropDownMenu from '../UtilComponents/DropDownMenu/DropDownMenu';
 
 function RoutingContent() {
   return (
@@ -7,10 +7,8 @@ function RoutingContent() {
         <div className="card">
           <div className="card-header d-flex flex-between-center bg-light py-2">
             <h6 className="mb-0">Active Users</h6>
-            <div className="dropdown font-sans-serif btn-reveal-trigger"><button className="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal dropdown-caret-none" type="button" id="dropdown-active-user" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span className="fas fa-ellipsis-h fs--2"></span></button>
-              <div className="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="dropdown-active-user"><a className="dropdown-item" href="#!">View</a><a className="dropdown-item" href="#!">Export</a>
-                <div className="dropdown-divider"></div><a className="dropdown-item text-danger" href="#!">Remove</a>
-              </div>
+            <div className="dropdown font-sans-serif btn-reveal-trigger">
+              <DropDownMenu></DropDownMenu>
             </div>
           </div>
           <div className="card-body py-2">

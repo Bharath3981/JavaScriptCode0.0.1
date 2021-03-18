@@ -1,6 +1,7 @@
 import LeftNavToggleIcon from '../LeftNavToggleIcon/LeftNavToggleIcon';
 import BrandLogo from '../BrandLogo/BrandLogo';
 import LeftNavBarMenus from '../LeftNavBarMenus/LeftNavBarMenus';
+import { Collapse } from 'react-bootstrap';
 
 function LeftNavBar( props ) {
   return (
@@ -9,7 +10,13 @@ function LeftNavBar( props ) {
         <LeftNavToggleIcon></LeftNavToggleIcon>
         <BrandLogo></BrandLogo>
       </div>
-      <LeftNavBarMenus sharedData={props.sharedData}></LeftNavBarMenus>
+      <Collapse  in={props.sharedData.toggleTopNavBar} >
+        <div className="navbar-collapse" id="navbarVerticalCollapse">
+          <div className="navbar-vertical-content scrollbar">
+            <LeftNavBarMenus></LeftNavBarMenus>
+          </div>
+        </div>
+      </Collapse>
     </nav>
   );
 }

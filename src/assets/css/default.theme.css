@@ -4932,9 +4932,7 @@ fieldset:disabled [data-list] .page,
 .fade:not(.show) {
     opacity: 0;
 }
-.collapse:not(.show) {
-    display: none;
-}
+
 .collapsing {
     height: 0;
     overflow: hidden;
@@ -19118,9 +19116,9 @@ h5,
 .navbar-vertical.navbar-inverted .navbar-vertical-content {
     max-height: calc(100vh - 4.3125rem - 1rem) !important;
 }
-.navbar-vertical .navbar-collapse {
+/* .navbar-vertical .navbar-collapse {
     background-color: var(--falcon-navbar-vertical-bg-color);
-}
+} */
 .navbar-vertical .navbar-nav .nav-item .navbar-vertical-label {
     color: var(--falcon-500);
 }
@@ -19547,7 +19545,7 @@ h5,
         margin-left: 15.5rem;
     }
     .navbar-vertical.navbar-expand-xl + .content {
-        margin-left: 15.625rem;
+        margin-left: 13.625rem;
     }
     .navbar-vertical.navbar-expand-xl + .content .navbar-top {
         position: -webkit-sticky;
@@ -19600,7 +19598,7 @@ h5,
         margin-left: 3.125rem;
     }
     .navbar-vertical-collapsed .navbar-vertical.navbar-expand-xl + .content .navbar-top {
-        padding-left: 13.5rem;
+        padding-left: 11.5rem;
     }
     .navbar-vertical-collapsed .navbar-vertical.navbar-expand-xl.navbar-card,
     .navbar-vertical-collapsed .navbar-vertical.navbar-expand-xl.navbar-vibrant,
