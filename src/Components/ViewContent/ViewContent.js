@@ -1,10 +1,10 @@
 import Banner from '../Banner/Banner';
 import RoutingContent from '../RoutingContent/RoutingContent';
 
-function ViewContent() {
+function ViewContent(props) {
   return (
     <div className="content">
-      <Banner></Banner>
+      <Banner sharedData={props.sharedData}></Banner>
       <RoutingContent></RoutingContent>
     </div>
   );

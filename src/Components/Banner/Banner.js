@@ -1,15 +1,14 @@
 
-import React, {useState} from 'react';
+import React from 'react';
 import brandLogoImage from '../../assets/img/illustrations/falcon.png';
 import { FaSearch } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 
-function Banner() {
-  const [open, setOpen] = useState(false);
+function Banner( props ) {
+  console.log(props);
   return (
     <nav className="navbar navbar-light navbar-glass navbar-top navbar-expand">
-        <Button className="navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => setOpen(!open)} aria-controls="navbarVerticalCollapse" aria-expanded={open}><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></Button>
-        <button className="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => document.getElementById('top').classList.toggle('navbar-vertical-collapsed')} type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></button>
+        <Button className="navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => props.sharedData.toggleCollpase(!props.sharedData.toggleTopNavBar)} aria-controls="navbarVerticalCollapse" aria-expanded={props.sharedData.toggleTopNavBar}><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></Button>
         <a className="navbar-brand me-1 me-sm-3" href="index.html">
           <div className="d-flex align-items-center"><img className="me-2" src={brandLogoImage} alt="" width="40" /><span className="font-sans-serif">falcon</span></div>
         </a>
