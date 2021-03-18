@@ -1,10 +1,11 @@
 import { FaChartPie, FaCalendarAlt, FaEnvelopeOpen } from 'react-icons/fa';
 import { Collapse } from 'react-bootstrap';
+import './LeftNavBarMenus.css';
 
 function LeftNavBarMenus(props) {
   return (
-    <Collapse in={props.sharedData.toggleTopNavBar} >
-    <div className="collapse navbar-collapse" id="navbarVerticalCollapse">
+    <Collapse  in={props.sharedData.toggleTopNavBar} >
+    <div className="navbar-collapse" id="navbarVerticalCollapse">
       <div className="navbar-vertical-content scrollbar">
         <ul className="navbar-nav flex-column mb-3" id="navbarVerticalNav">
           <li className="nav-item">
