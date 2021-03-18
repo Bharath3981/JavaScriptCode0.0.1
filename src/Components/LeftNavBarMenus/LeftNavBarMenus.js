@@ -1,6 +1,5 @@
 import { FaChartPie, FaCalendarAlt, FaEnvelopeOpen } from 'react-icons/fa';
 import { Collapse } from 'react-bootstrap';
-import './LeftNavBarMenus.css';
 
 function LeftNavBarMenus(props) {
   return (

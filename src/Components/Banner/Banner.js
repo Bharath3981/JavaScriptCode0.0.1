@@ -23,7 +23,7 @@ function Banner( props ) {
         </ul>
         <ul className="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center">
           <li className="nav-item dropdown">
-            <a className="nav-link pe-0" id="navbarDropdownUser" role="button" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a className="nav-link pe-0" id="navbarDropdownUser" role="button" href="javascript:void(0);" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div className="avatar avatar-xl">
                 <img className="rounded-circle" src="" alt="" />
               </div>

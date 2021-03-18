@@ -17529,7 +17529,7 @@ span.flatpickr-weekday,
 .choices {
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
-.choices .choices__inner {
+/* .choices .choices__inner {
     border-radius: 0.25rem;
     min-height: calc($input-line-height + $input-padding-y * 2 + $input-border-width);
     line-height: 1.5rem !important;
@@ -17540,7 +17540,7 @@ span.flatpickr-weekday,
     padding: 0.26042rem 4rem 0.26042rem 1rem;
     -webkit-box-shadow: var(--falcon-box-shadow-inset);
     box-shadow: var(--falcon-box-shadow-inset);
-}
+} */
 .choices .choices__input--cloned {
     padding: 0;
     font-size: 1rem;
