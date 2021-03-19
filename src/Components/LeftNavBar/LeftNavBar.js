@@ -6,7 +6,7 @@ import { Collapse } from 'react-bootstrap';
 function LeftNavBar( props ) {
   return (
     <nav className="navbar navbar-light navbar-vertical navbar-expand-xl">
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center jsc-logo-content">
         <LeftNavToggleIcon></LeftNavToggleIcon>
         <BrandLogo></BrandLogo>
       </div>

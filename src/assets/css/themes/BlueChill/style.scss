@@ -1,21 +1,50 @@
-$theme-light: #f0f8ff;
-$theme-bg: #0c8195;
-$theme-active-text-color: #f1c111;
+// $theme-light: #f0f8ff;
+// $theme-bg: #0c8195;
+// $theme-active-text-color: #0c8195;//#f1c111;
+
+$theme-light: #f6f7f9;
+$hteme-color: #346CB0;
+$theme-active-text-color :#346CB0;
+$theme-font-color: #5e6e82;
 
 body {
-    background: $theme-bg;
+    background: $theme-light;
 }
+.navbar.navbar-top {
+    background-color: $hteme-color;
+}
+@media (min-width: 1200px) {
+    .navbar .jsc-logo-content {
+        padding: 8.5px 0px 8.5px 16px !important;
+        margin-right: -1px;
+    }
+    .container-fluid {
+        padding-left: 0px;
+    }
+}
+.navbar .jsc-logo-content {
+    padding: 0px;
+    background-color: $hteme-color;
+}
+
+.jsc-routing-content {
+    padding-top: 16px;
+}
+
 .navbar {
-    background-color: $theme-bg;
+    background-color: $theme-light;
     .navbar-nav {
         .nav-item {
             .nav-link.active {
                 color: $theme-active-text-color !important;
             }
             .nav-link {
-                color: $theme-light;
+                color: theme-font-color;
             }
         }
+    }
+    .navbar-collapse {
+        padding-left: 16px;
     }
     
 }

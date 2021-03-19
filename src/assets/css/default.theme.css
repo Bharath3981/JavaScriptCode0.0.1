@@ -16342,9 +16342,9 @@ label {
 .navbar-toggle-icon:after {
     top: 0.625rem;
 }
-.navbar-glass {
+/* .navbar-glass {
     background-color: var(--falcon-bg-navbar-glass);
-}
+} */
 .navbar-brand {
     font-weight: 800;
 }

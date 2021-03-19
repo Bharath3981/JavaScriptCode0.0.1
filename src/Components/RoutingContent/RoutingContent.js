@@ -2,7 +2,7 @@ import DropDownMenu from '../UtilComponents/DropDownMenu/DropDownMenu';
 
 function RoutingContent() {
   return (
-    <div className="row g-0">
+    <div className="row g-0 jsc-routing-content">
       <div className="col-sm-6 col-xxl-3 pe-sm-2 mb-3 mb-xxl-0">
         <div className="card">
           <div className="card-header d-flex flex-between-center bg-light py-2">

@@ -6,7 +6,7 @@ function LeftNavBarMenus(props) {
     <ul className="navbar-nav flex-column mb-3" id="navbarVerticalNav">
       <LeftNavMenuItem params={{menuIcon: FaChartPie, menuLabel: 'Default', menuClasses: 'active'}}></LeftNavMenuItem>
       <LeftNavMenuItem params={{menuIcon: FaCalendarAlt, menuLabel: 'Calendar'}}></LeftNavMenuItem>
-      <li>
+      <li className="nav-item">
         <a className="nav-link" href="app/calendar.html" role="button">
           <div className="d-flex align-items-center"><span className="nav-link-icon">
             <FaCalendarAlt/>
@@ -14,7 +14,7 @@ function LeftNavBarMenus(props) {
           </div>
         </a>
       </li>
-      <li>
+      <li className="nav-item">
         <a className="nav-link dropdown-indicator" href="#email" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="email">
           <div className="d-flex align-items-center"><span className="nav-link-icon">
             <FaEnvelopeOpen />

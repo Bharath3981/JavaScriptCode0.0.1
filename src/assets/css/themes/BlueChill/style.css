@@ -1,16 +1,43 @@
 body {
-  background: #0c8195;
+  background: #f6f7f9;
+}
+
+.navbar.navbar-top {
+  background-color: #346CB0;
+}
+
+@media (min-width: 1200px) {
+  .navbar .jsc-logo-content {
+    padding: 8.5px 0px 8.5px 16px !important;
+    margin-right: -1px;
+  }
+  .container-fluid {
+    padding-left: 0px;
+  }
+}
+
+.navbar .jsc-logo-content {
+  padding: 0px;
+  background-color: #346CB0;
+}
+
+.jsc-routing-content {
+  padding-top: 16px;
 }
 
 .navbar {
-  background-color: #0c8195;
+  background-color: #f6f7f9;
 }
 
 .navbar .navbar-nav .nav-item .nav-link.active {
-  color: #f1c111 !important;
+  color: #346CB0 !important;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-  color: #f0f8ff;
+  color: theme-font-color;
+}
+
+.navbar .navbar-collapse {
+  padding-left: 16px;
 }
 /*# sourceMappingURL=style.css.map */
