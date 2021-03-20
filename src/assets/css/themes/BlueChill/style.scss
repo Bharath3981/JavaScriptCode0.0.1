@@ -2,10 +2,11 @@
 // $theme-bg: #0c8195;
 // $theme-active-text-color: #0c8195;//#f1c111;
 
-$theme-light: #f6f7f9;
-$hteme-color: #346CB0;
+$theme-light: #ffffff;
+$hteme-color: #FCFBFA;
 $theme-active-text-color :#346CB0;
 $theme-font-color: #5e6e82;
+$theme-shadow-color: #ccc;
 
 body {
     background: $theme-light;
@@ -15,7 +16,7 @@ body {
 }
 @media (min-width: 1200px) {
     .navbar .jsc-logo-content {
-        padding: 8.5px 0px 8.5px 16px !important;
+        padding: 8.7px 0px 8.7px 16px !important;
         margin-right: -1px;
     }
     .container-fluid {
@@ -25,6 +26,7 @@ body {
 .navbar .jsc-logo-content {
     padding: 0px;
     background-color: $hteme-color;
+    box-shadow: 0px 1px 10px $theme-shadow-color;
 }
 
 .jsc-routing-content {
@@ -47,4 +49,39 @@ body {
         padding-left: 16px;
     }
     
+}
+.navbar.navbar-top {
+    box-shadow: 0px 10px 8px -10px $theme-shadow-color;
+}
+
+.card {
+    .card-header {
+        background-color: $theme-active-text-color;
+        h6, button {
+            color: $theme-light;
+        }
+    }
+    
+}
+
+.user-menu {
+    visibility: hidden;
+}
+
+.navbar {
+    .nav.topics {
+        button:hover {
+            border: 1px solid $theme-active-text-color;
+        }
+        button.active {
+            color: #346CB0;
+            border-bottom: 5px solid #346CB0;
+            box-shadow: none;
+        }
+        button {
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
 }

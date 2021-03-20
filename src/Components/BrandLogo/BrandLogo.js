@@ -3,7 +3,7 @@ import brandLogoImage from '../../assets/img/illustrations/falcon.png';
 function BrandLogo() {
   return (
     <a className="navbar-brand" href="index.html">
-      <div className="d-flex align-items-center"><img className="me-2" src={brandLogoImage} alt="" width="40" /><span className="font-sans-serif">falcon</span></div>
+      <div className="d-flex align-items-center"><img className="me-2"  alt="" width="40" /><span className="font-sans-serif">JS</span></div>
     </a>
   );
 }

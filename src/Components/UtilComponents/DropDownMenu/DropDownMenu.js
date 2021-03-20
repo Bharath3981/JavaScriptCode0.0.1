@@ -4,7 +4,7 @@ import { Dropdown } from 'react-bootstrap';
 function DropDownMenu() {
   return (
     <Dropdown>
-      <Dropdown.Toggle variant="link" className="btn-sm text-600" id="dropdown-basic">
+      <Dropdown.Toggle variant="link" className="btn-sm" id="dropdown-basic">
         <FaEllipsisH></FaEllipsisH>
       </Dropdown.Toggle>
 

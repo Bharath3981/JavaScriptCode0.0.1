@@ -1,7 +1,6 @@
 
 
 function LeftNavMenuItem(props) {
-  console.log(props)
   return (
     <li className="nav-item">
       <a className={"nav-link "+props.params.menuClasses} href="index.html" role="button">

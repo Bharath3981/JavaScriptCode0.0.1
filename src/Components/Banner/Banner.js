@@ -2,6 +2,8 @@
 import React from 'react';
 import brandLogoImage from '../../assets/img/illustrations/falcon.png';
 import { FaSearch } from 'react-icons/fa';
+import { SiJavascript } from 'react-icons/si';
+import { ImTree } from 'react-icons/im';
 import { Button } from 'react-bootstrap';
 
 function Banner( props ) {
@@ -9,7 +11,7 @@ function Banner( props ) {
     <nav className="navbar navbar-light navbar-glass navbar-top navbar-expand">
         <Button className="navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => props.sharedData.toggleCollpase(!props.sharedData.toggleTopNavBar)} aria-controls="navbarVerticalCollapse" aria-expanded={props.sharedData.toggleTopNavBar}><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></Button>
         <a className="navbar-brand me-1 me-sm-3" href="index.html">
-          <div className="d-flex align-items-center"><img className="me-2" src={brandLogoImage} alt="" width="40" /><span className="font-sans-serif">falcon</span></div>
+          <div className="d-flex align-items-center"><img className="me-2"  alt="" width="40" /><span className="font-sans-serif">JS</span></div>
         </a>
         <ul className="navbar-nav align-items-center d-none d-lg-block">
           <li className="nav-item">
@@ -20,13 +22,23 @@ function Banner( props ) {
             </div>
           </li>
         </ul>
-        <ul className="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center">
-          <li className="nav-item dropdown">
+        
+        <ul className="navbar-nav navbar-nav-icons flex-row align-items-center d-none d-sm-inline user-menu">
+          <li className="nav-item">
             <a className="nav-link pe-0" id="navbarDropdownUser" role="button" href="#!" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div className="avatar avatar-xl">
                 <img className="rounded-circle" src="" alt="" />
               </div>
             </a>
+          </li>
+        </ul>
+        <ul className="nav navbar-nav ms-auto topics">
+          <li>
+            <button type="button" className="btn active">
+              <SiJavascript></SiJavascript><span className="d-none d-sm-inline">JavaScript</span></button>
+          </li>
+          <li>
+          <button type="button" className="btn"><ImTree></ImTree> <span className="d-none d-sm-inline">Data Structures</span></button>
           </li>
         </ul>
       </nav>

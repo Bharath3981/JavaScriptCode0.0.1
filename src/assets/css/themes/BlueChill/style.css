@@ -1,14 +1,14 @@
 body {
-  background: #f6f7f9;
+  background: #ffffff;
 }
 
 .navbar.navbar-top {
-  background-color: #346CB0;
+  background-color: #FCFBFA;
 }
 
 @media (min-width: 1200px) {
   .navbar .jsc-logo-content {
-    padding: 8.5px 0px 8.5px 16px !important;
+    padding: 8.7px 0px 8.7px 16px !important;
     margin-right: -1px;
   }
   .container-fluid {
@@ -18,7 +18,9 @@ body {
 
 .navbar .jsc-logo-content {
   padding: 0px;
-  background-color: #346CB0;
+  background-color: #FCFBFA;
+  -webkit-box-shadow: 0px 1px 10px #ccc;
+          box-shadow: 0px 1px 10px #ccc;
 }
 
 .jsc-routing-content {
@@ -26,7 +28,7 @@ body {
 }
 
 .navbar {
-  background-color: #f6f7f9;
+  background-color: #ffffff;
 }
 
 .navbar .navbar-nav .nav-item .nav-link.active {
@@ -39,5 +41,37 @@ body {
 
 .navbar .navbar-collapse {
   padding-left: 16px;
+}
+
+.navbar.navbar-top {
+  -webkit-box-shadow: 0px 10px 8px -10px #ccc;
+          box-shadow: 0px 10px 8px -10px #ccc;
+}
+
+.card .card-header {
+  background-color: #346CB0;
+}
+
+.card .card-header h6, .card .card-header button {
+  color: #ffffff;
+}
+
+.user-menu {
+  visibility: hidden;
+}
+
+.navbar .nav.topics button:hover {
+  border: 1px solid #346CB0;
+}
+
+.navbar .nav.topics button.active {
+  color: #346CB0;
+  border-bottom: 5px solid #346CB0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar .nav.topics button span {
+  margin-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */
