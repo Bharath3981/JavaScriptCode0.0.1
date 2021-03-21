@@ -1,12 +1,20 @@
 
 import React from 'react';
-import brandLogoImage from '../../assets/img/illustrations/falcon.png';
 import { FaSearch } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
 import { ImTree } from 'react-icons/im';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Banner( props ) {
+  let previousTopicElement = null;
+  function topicClickHandler( event ) {
+    if( previousTopicElement ) {
+      previousTopicElement.classList.toggle('active');
+    }
+    event.currentTarget.classList.toggle('active');
+    previousTopicElement = event.currentTarget;
+  }
   return (
     <nav className="navbar navbar-light navbar-glass navbar-top navbar-expand">
         <Button className="navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => props.sharedData.toggleCollpase(!props.sharedData.toggleTopNavBar)} aria-controls="navbarVerticalCollapse" aria-expanded={props.sharedData.toggleTopNavBar}><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></Button>
@@ -34,11 +42,18 @@ function Banner( props ) {
         </ul>
         <ul className="nav navbar-nav ms-auto topics">
           <li>
-            <button type="button" className="btn active">
-              <SiJavascript></SiJavascript><span className="d-none d-sm-inline">JavaScript</span></button>
+            <Link to="/">
+              <button type="button" className="btn btn-sm active" onClick={(event) => topicClickHandler(event)}>
+                <SiJavascript></SiJavascript><span className="d-none d-sm-inline">&nbsp;JavaScript</span>
+              </button>
+            </Link>
           </li>
           <li>
-          <button type="button" className="btn"><ImTree></ImTree> <span className="d-none d-sm-inline">Data Structures</span></button>
+            <Link to="/datastructures">
+              <button type="button" className="btn btn-sm" onClick={(event) => topicClickHandler(event)}>
+                <ImTree></ImTree><span className="d-none d-sm-inline">&nbsp;Data Structures</span>
+              </button>
+            </Link>
           </li>
         </ul>
       </nav>

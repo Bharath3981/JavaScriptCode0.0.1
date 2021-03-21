@@ -1,25 +1,14 @@
-import DropDownMenu from '../UtilComponents/DropDownMenu/DropDownMenu';
+import TopicCard from '../UtilComponents/TopicCard/TopicCard';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import JavaScriptTopic from '../TopicComponents/JavaScriptTopic/JavaScriptTopic';
+import DataStructuresTopic from '../TopicComponents/DataStructuresTopic/DataStructuresTopic';
 
 function RoutingContent() {
   return (
-    <div className="row g-0 jsc-routing-content">
-      <div className="col-sm-6 col-xxl-3 col-md-12 mb-3 mb-xxl-0">
-        <div className="card">
-          <div className="card-header d-flex flex-between-center py-2">
-            <h6 className="mb-0">Topic</h6>
-            <div className="dropdown font-sans-serif btn-reveal-trigger">
-              <DropDownMenu></DropDownMenu>
-            </div>
-          </div>
-          <div className="card-body py-2">
-            boddy
-          </div>
-          
-        </div>
-      </div>
-      
-      
-    </div>
+    <Switch>
+      <Route path="/" exact component={JavaScriptTopic}></Route>
+      <Route path="/datastructures" component={DataStructuresTopic}></Route>
+    </Switch>
   );
 }
 
