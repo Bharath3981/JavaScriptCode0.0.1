@@ -4,10 +4,11 @@ import './assets/css/default.theme.css';
 import './assets/css/themes/BlueChill/style.css';
 import MainContent from './Components/MainContent/MainContent';
 
+
 function JavaScriptCodeApp() {
   return (
     <div id="mainBody" className="">
-      <MainContent></MainContent>
+        <MainContent></MainContent>
     </div>
   );
 }

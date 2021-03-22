@@ -3,7 +3,7 @@
 // $theme-active-text-color: #0c8195;//#f1c111;
 
 $theme-light: #ffffff;
-$hteme-color: #FCFBFA;
+$theme-color: #FCFBFA;
 $theme-active-text-color :#346CB0;
 $theme-font-color: #5e6e82;
 $theme-shadow-color: #ccc;
@@ -12,7 +12,7 @@ body {
     background: $theme-light;
 }
 .navbar.navbar-top {
-    background-color: $hteme-color;
+    background-color: $theme-color;
     min-height: 70px;
 }
 @media (min-width: 1200px) {
@@ -26,9 +26,9 @@ body {
 }
 .navbar .jsc-logo-content {
     padding: 0px;
-    background-color: $hteme-color;
+    background-color: $theme-color;
     // box-shadow: 0px 1px 10px $theme-shadow-color;
-    border-bottom: 1px solid $theme-font-color;
+    border-bottom: 1px solid $theme-active-text-color;
 }
 
 .jsc-routing-content {
@@ -41,6 +41,8 @@ body {
         .nav-item {
             .nav-link.active {
                 color: $theme-active-text-color !important;
+                font-weight: 700;
+                font-size: 14px;
             }
             .nav-link {
                 color: $theme-font-color;
@@ -73,27 +75,45 @@ body {
 }
 
 .navbar {
-    .nav.topics {
-        button:hover {
-            border: 1px solid $theme-active-text-color;
-            a {
+    .navbar-nav.topics { 
+        li {
+            padding: 0px 7px;
+            a:hover, a.active {
+                padding: 5px;
+                border: 1px solid $theme-active-text-color;
+                border-radius: 5px;
+                background: $theme-active-text-color;
+                color: white;
                 text-decoration: none;
-                color: #346CB0 !important;
             }
-        }
-        button {
-            text-decoration: none;
-            span {
+            a {
+                padding: 5px;
+                border: 1px solid transparent;
+                border-radius: 5px;
+                background: transparent;
                 color: $theme-font-color;
+                text-decoration: none;
             }
-            border-bottom: 5px solid transparent;
+            
         }
-        button.active {
-            span, svg {
-                color: #346CB0 !important;
-            }
-            border-bottom: 5px solid #346CB0;
-            box-shadow: none;
-        }
+        
+        
     }
 }
+::-webkit-scrollbar {
+    width:0px;
+}
+// #navbarVerticalCollapse:hover {
+//     ::-webkit-scrollbar {
+//         width:4px;
+//       }
+// }
+// ::-webkit-scrollbar {
+//     width:0px;
+// }
+//  ::-webkit-scrollbar-thumb {
+//    background: $theme-active-text-color; 
+//    border-radius: 10px;
+//  }
+  
+  

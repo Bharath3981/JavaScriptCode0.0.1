@@ -1,5 +1,3 @@
-import brandLogoImage from '../../assets/img/illustrations/falcon.png';
-
 function BrandLogo() {
   return (
     <a className="navbar-brand" href="index.html">

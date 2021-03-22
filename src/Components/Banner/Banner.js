@@ -4,16 +4,16 @@ import { FaSearch } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
 import { ImTree } from 'react-icons/im';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Banner( props ) {
   let previousTopicElement = null;
   function topicClickHandler( event ) {
-    if( previousTopicElement ) {
-      previousTopicElement.classList.toggle('active');
-    }
-    event.currentTarget.classList.toggle('active');
-    previousTopicElement = event.currentTarget;
+    // if( previousTopicElement ) {
+    //   previousTopicElement.classList.toggle('active');
+    // }
+    // event.currentTarget.classList.toggle('active');
+    // previousTopicElement = event.currentTarget;
   }
   return (
     <nav className="navbar navbar-light navbar-glass navbar-top navbar-expand">
@@ -42,18 +42,14 @@ function Banner( props ) {
         </ul>
         <ul className="nav navbar-nav ms-auto topics">
           <li>
-            <Link to="/">
-              <button type="button" className="btn btn-sm active" onClick={(event) => topicClickHandler(event)}>
-                <SiJavascript></SiJavascript><span className="d-none d-sm-inline">&nbsp;JavaScript</span>
-              </button>
-            </Link>
+            <NavLink to="/javascript" activeClassName="active" className="jsc-route-menu">
+              <SiJavascript></SiJavascript><span className="d-none d-sm-inline">&nbsp;JavaScript</span>
+            </NavLink>
           </li>
           <li>
-            <Link to="/datastructures">
-              <button type="button" className="btn btn-sm" onClick={(event) => topicClickHandler(event)}>
-                <ImTree></ImTree><span className="d-none d-sm-inline">&nbsp;Data Structures</span>
-              </button>
-            </Link>
+            <NavLink to="/datastructures" activeClassName="active" className="jsc-route-menu">
+              <ImTree></ImTree><span className="d-none d-sm-inline">&nbsp;DataStructures</span>
+            </NavLink>
           </li>
         </ul>
       </nav>

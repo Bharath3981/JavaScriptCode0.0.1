@@ -6,11 +6,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 function MainContent() {
   const [toggleTopNavBar, setToggleTopNavBar] = useState(false);
   function toggleCollpase( value ) {
-    if( value ) {
-      document.querySelector('.navbar.navbar-top').style.borderBottom = 'none';
-    } else {
-      document.querySelector('.navbar.navbar-top').style.borderBottom = '1px solid #5e6e82';
-    }
     setToggleTopNavBar( value );
   }
   return (

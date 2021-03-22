@@ -19492,7 +19492,7 @@ h5,
         text-align: center;
     }
     .navbar-vertical.navbar-expand-xl .navbar-collapse {
-        margin-top: -0.3125rem;
+        /* margin-top: -0.3125rem; */
         -webkit-transition: width 0.2s ease;
         -o-transition: width 0.2s ease;
         transition: width 0.2s ease;
@@ -19505,7 +19505,7 @@ h5,
         width: 12.625rem;
     }
     .navbar-vertical.navbar-expand-xl .navbar-vertical-content {
-        width: 12.625rem;
+        width: 11.625rem;
         height: calc(100vh - 4.3125rem);
         padding: 0.5rem 0 0 0;
     }
