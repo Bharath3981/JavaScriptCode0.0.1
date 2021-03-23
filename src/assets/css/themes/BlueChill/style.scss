@@ -37,18 +37,7 @@ body {
 
 .navbar {
     background-color: $theme-light;
-    .navbar-nav {
-        .nav-item {
-            .nav-link.active {
-                color: $theme-active-text-color !important;
-                font-weight: 700;
-                font-size: 14px;
-            }
-            .nav-link {
-                color: $theme-font-color;
-            }
-        }
-    }
+    
     .navbar-collapse {
         padding-left: 16px;
     }
@@ -94,10 +83,24 @@ body {
                 color: $theme-font-color;
                 text-decoration: none;
             }
-            
         }
-        
-        
+    }
+    .navbar-vertical-content {
+        .nav-item {
+            a:hover, a.active {
+                text-decoration: none;
+                color: $theme-active-text-color !important;
+                font-weight: 700;
+                font-size: 14px;
+                color: $theme-font-color;
+                a {
+                    color: $theme-active-text-color !important;
+                }
+            }
+            a {
+                color: $theme-font-color;
+            }
+        }
     }
 }
 ::-webkit-scrollbar {

@@ -31,16 +31,6 @@ body {
   background-color: #ffffff;
 }
 
-.navbar .navbar-nav .nav-item .nav-link.active {
-  color: #346CB0 !important;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-  color: #5e6e82;
-}
-
 .navbar .navbar-collapse {
   padding-left: 16px;
 }
@@ -81,6 +71,22 @@ body {
   background: transparent;
   color: #5e6e82;
   text-decoration: none;
+}
+
+.navbar .navbar-vertical-content .nav-item a:hover, .navbar .navbar-vertical-content .nav-item a.active {
+  text-decoration: none;
+  color: #346CB0 !important;
+  font-weight: 700;
+  font-size: 14px;
+  color: #5e6e82;
+}
+
+.navbar .navbar-vertical-content .nav-item a:hover a, .navbar .navbar-vertical-content .nav-item a.active a {
+  color: #346CB0 !important;
+}
+
+.navbar .navbar-vertical-content .nav-item a {
+  color: #5e6e82;
 }
 
 ::-webkit-scrollbar {

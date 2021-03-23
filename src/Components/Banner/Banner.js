@@ -1,20 +1,20 @@
 
-import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
 import { ImTree } from 'react-icons/im';
 import { Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import Context from '../../Store/context';
+import { useContext } from 'react';
+import { FaHistory } from 'react-icons/fa';
+import { GrInherit } from 'react-icons/gr';
 
 function Banner( props ) {
-  let previousTopicElement = null;
-  function topicClickHandler( event ) {
-    // if( previousTopicElement ) {
-    //   previousTopicElement.classList.toggle('active');
-    // }
-    // event.currentTarget.classList.toggle('active');
-    // previousTopicElement = event.currentTarget;
-  }
+  const { leftNavMenus, setLeftNavMenusHandler } = useContext(Context);
+  const topics = [
+    { topicId: 1, topicIcon: FaHistory, topicLabel: 'History', subTopic: 'javascript'},
+    { topicId: 2, topicIcon: GrInherit, topicLabel: 'Prototype', subTopic: 'javascript/prototype'}
+  ];
   return (
     <nav className="navbar navbar-light navbar-glass navbar-top navbar-expand">
         <Button className="navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" onClick={() => props.sharedData.toggleCollpase(!props.sharedData.toggleTopNavBar)} aria-controls="navbarVerticalCollapse" aria-expanded={props.sharedData.toggleTopNavBar}><span className="navbar-toggle-icon"><span className="toggle-line"></span></span></Button>
@@ -42,7 +42,7 @@ function Banner( props ) {
         </ul>
         <ul className="nav navbar-nav ms-auto topics">
           <li>
-            <NavLink to="/javascript" activeClassName="active" className="jsc-route-menu">
+            <NavLink to="/javascript" onClick={() => setLeftNavMenusHandler( topics )}  activeClassName="active" className="jsc-route-menu">
               <SiJavascript></SiJavascript><span className="d-none d-sm-inline">&nbsp;JavaScript</span>
             </NavLink>
           </li>
