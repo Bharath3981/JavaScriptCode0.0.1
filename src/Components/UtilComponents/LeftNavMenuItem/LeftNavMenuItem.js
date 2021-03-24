@@ -1,18 +1,21 @@
 import { NavLink } from 'react-router-dom';
+import React from 'react';
 
-function LeftNavMenuItem(props) {
-  return (
-    <li className="nav-item">
-      
-      <NavLink to={'/'+props.params.topic} className="nav-link" role="button" exact={true} activeClassName="active">
-        <div className="d-flex align-items-center"><span className="nav-link-icon">
-          {props.params.menuIcon()}
-          </span><span className="nav-link-text ps-1">{props.params.menuLabel}</span>
-        </div>
-        </NavLink>
-      
-    </li>
-  );
+class LeftNavMenuItem extends React.Component {
+  render() {
+    return (
+      <li className="nav-item">
+        <NavLink to={'/'+this.props.params.topic} className="nav-link" role="button" exact={true} activeClassName="active">
+          <div className="d-flex align-items-center"><span className="nav-link-icon">
+            {this.props.params.menuIcon()}
+            </span><span className="nav-link-text ps-1">{this.props.params.menuLabel}</span>
+          </div>
+          </NavLink>
+        
+      </li>
+    );
+  }
 }
+
 
 export default LeftNavMenuItem;

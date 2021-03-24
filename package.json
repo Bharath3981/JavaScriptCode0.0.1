@@ -1,6 +1,7 @@
 {
   "name": "JavaScriptCode_0.0.1",
   "version": "0.0.1",
+  "homepage": "https://javascriptcode.in",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",

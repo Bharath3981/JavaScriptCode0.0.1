@@ -1,13 +1,16 @@
 import Banner from '../Banner/Banner';
 import RoutingContent from '../RoutingContent/RoutingContent';
+import React from 'react';
 
-function ViewContent(props) {
-  return (
-    <div className="content">
-      <Banner sharedData={props.sharedData}></Banner>
-      <RoutingContent></RoutingContent>
-    </div>
-  );
+class ViewContent extends React.Component {
+  render() {
+    return (
+      <div className="content">
+        <Banner></Banner>
+        <RoutingContent></RoutingContent>
+      </div>
+    );
+  }
 }
 
 export default ViewContent;
