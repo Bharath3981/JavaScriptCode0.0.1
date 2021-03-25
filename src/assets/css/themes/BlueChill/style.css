@@ -43,7 +43,7 @@ body {
   background-color: #346CB0;
 }
 
-.card .card-header h6, .card .card-header button {
+.card .card-header h4, .card .card-header button {
   color: #ffffff;
 }
 
@@ -91,5 +91,25 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.jsc-theme-tabs.nav-tabs .nav-item {
+  padding: 3px 8px;
+}
+
+.jsc-theme-tabs.nav-tabs .nav-item:hover, .jsc-theme-tabs.nav-tabs .nav-item.active {
+  color: white;
+  background: #263238;
+}
+
+.jsc-theme-tabs.nav-tabs .nav-link {
+  border: none;
+  color: #346CB0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.jsc-code-mirror-wrapper .CodeMirror-wrap {
+  border-radius: 0px 4px 4px 4px;
 }
 /*# sourceMappingURL=style.css.map */

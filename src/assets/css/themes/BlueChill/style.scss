@@ -7,6 +7,8 @@ $theme-color: #FCFBFA;
 $theme-active-text-color :#346CB0;
 $theme-font-color: #5e6e82;
 $theme-shadow-color: #ccc;
+$theme-font-weight: 700;
+$theme-font-size: 14px;
 
 body {
     background: $theme-light;
@@ -52,7 +54,7 @@ body {
 .card {
     .card-header {
         background-color: $theme-active-text-color;
-        h6, button {
+        h4, button {
             color: $theme-light;
         }
     }
@@ -90,8 +92,8 @@ body {
             a:hover, a.active {
                 text-decoration: none;
                 color: $theme-active-text-color !important;
-                font-weight: 700;
-                font-size: 14px;
+                font-weight: $theme-font-weight;
+                font-size: $theme-font-size;
                 color: $theme-font-color;
                 a {
                     color: $theme-active-text-color !important;
@@ -119,4 +121,27 @@ body {
 //    border-radius: 10px;
 //  }
   
+
+// Editor Tabs
+.jsc-theme-tabs.nav-tabs {
+    .nav-item {
+        padding: 3px 8px;
+    }
+    .nav-item:hover, .nav-item.active {
+        color: white;
+        background: #263238;
+    }
+    .nav-link {
+        border: none;
+        color: $theme-active-text-color;
+        font-weight: $theme-font-weight;
+        font-size: $theme-font-size;
+    }
+}
+.jsc-code-mirror-wrapper {
+    .CodeMirror-wrap {
+        border-radius: 0px 4px 4px 4px;
+    }
+}
+// Editor Tabs
   

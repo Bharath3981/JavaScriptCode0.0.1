@@ -10,8 +10,7 @@ class LeftNavMenuItem extends React.Component {
             {this.props.params.menuIcon()}
             </span><span className="nav-link-text ps-1">{this.props.params.menuLabel}</span>
           </div>
-          </NavLink>
-        
+        </NavLink>
       </li>
     );
   }
