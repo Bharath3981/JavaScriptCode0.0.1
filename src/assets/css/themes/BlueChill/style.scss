@@ -9,6 +9,8 @@ $theme-font-color: #5e6e82;
 $theme-shadow-color: #ccc;
 $theme-font-weight: 700;
 $theme-font-size: 14px;
+$theme-box-shadow: 0px 0px 5px 2px #dee2e6;
+$theme-border-radius: 4px;
 
 body {
     background: $theme-light;
@@ -17,6 +19,12 @@ body {
     background-color: $theme-color;
     min-height: 70px;
 }
+.jsc-content-space {
+    padding-top: 10px;
+}
+.ms-auto {
+    margin-left: auto !important;
+}
 @media (min-width: 1200px) {
     .navbar .jsc-logo-content {
         padding: 8.7px 0px 8.7px 16px !important;
@@ -24,6 +32,16 @@ body {
     }
     .container-fluid {
         padding-left: 0px;
+    }
+    main.navbar-vertical-collapsed {
+        .card {
+            margin-left: 6px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .jsc-theme-tabs {
+        padding-top: 8px;
     }
 }
 .navbar .jsc-logo-content {
@@ -49,16 +67,6 @@ body {
 .navbar.navbar-top {
     //box-shadow: 0px 10px 8px -10px $theme-shadow-color;
     border-bottom: 1px solid $theme-font-color;
-}
-
-.card {
-    .card-header {
-        background-color: $theme-active-text-color;
-        h4, button {
-            color: $theme-light;
-        }
-    }
-    
 }
 
 .user-menu {
@@ -124,24 +132,51 @@ body {
 
 // Editor Tabs
 .jsc-theme-tabs.nav-tabs {
+    margin: 0;
     .nav-item {
         padding: 3px 8px;
+        color: $theme-font-color;
     }
     .nav-item:hover, .nav-item.active {
-        color: white;
-        background: #263238;
+        color: $theme-active-text-color;
     }
     .nav-link {
-        border: none;
-        color: $theme-active-text-color;
+        
         font-weight: $theme-font-weight;
         font-size: $theme-font-size;
     }
 }
-.jsc-code-mirror-wrapper {
-    .CodeMirror-wrap {
-        border-radius: 0px 4px 4px 4px;
+.tab-content {
+    border: 1px solid #dee2e6;
+    border-radius: $theme-border-radius;
+    .tab-pane {
+        height: 400px;
     }
 }
 // Editor Tabs
+
+//Editor Css
+.jsc-code-mirror-wrapper {
+    .CodeMirror-wrap {
+        height: 400px;
+    }
+}
+//Editor Css
+
+//Card Specific css
+.card {
+    box-shadow: $theme-box-shadow;
+    .card-header {
+        background-color: $theme-active-text-color;
+        color: $theme-light;
+        button {
+            color: $theme-light;
+        }
+        .dropdown-toggle::after {
+            display: none;
+        }
+    }
+    
+}
+//Card specific css
   

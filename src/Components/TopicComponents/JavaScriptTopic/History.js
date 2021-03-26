@@ -7,7 +7,7 @@ class History extends React.Component {
     return (
       <TopicCard params={{title: 'History'}}>
         <EditorView></EditorView>
-      </TopicCard> 
+      </TopicCard>
     );
   }
 }

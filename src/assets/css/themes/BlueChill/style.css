@@ -7,6 +7,14 @@ body {
   min-height: 70px;
 }
 
+.jsc-content-space {
+  padding-top: 10px;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
 @media (min-width: 1200px) {
   .navbar .jsc-logo-content {
     padding: 8.7px 0px 8.7px 16px !important;
@@ -14,6 +22,15 @@ body {
   }
   .container-fluid {
     padding-left: 0px;
+  }
+  main.navbar-vertical-collapsed .card {
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jsc-theme-tabs {
+    padding-top: 8px;
   }
 }
 
@@ -37,14 +54,6 @@ body {
 
 .navbar.navbar-top {
   border-bottom: 1px solid #5e6e82;
-}
-
-.card .card-header {
-  background-color: #346CB0;
-}
-
-.card .card-header h4, .card .card-header button {
-  color: #ffffff;
 }
 
 .user-menu {
@@ -93,23 +102,52 @@ body {
   width: 0px;
 }
 
+.jsc-theme-tabs.nav-tabs {
+  margin: 0;
+}
+
 .jsc-theme-tabs.nav-tabs .nav-item {
   padding: 3px 8px;
+  color: #5e6e82;
 }
 
 .jsc-theme-tabs.nav-tabs .nav-item:hover, .jsc-theme-tabs.nav-tabs .nav-item.active {
-  color: white;
-  background: #263238;
+  color: #346CB0;
 }
 
 .jsc-theme-tabs.nav-tabs .nav-link {
-  border: none;
-  color: #346CB0;
   font-weight: 700;
   font-size: 14px;
 }
 
+.tab-content {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.tab-content .tab-pane {
+  height: 400px;
+}
+
 .jsc-code-mirror-wrapper .CodeMirror-wrap {
-  border-radius: 0px 4px 4px 4px;
+  height: 400px;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 5px 2px #dee2e6;
+          box-shadow: 0px 0px 5px 2px #dee2e6;
+}
+
+.card .card-header {
+  background-color: #346CB0;
+  color: #ffffff;
+}
+
+.card .card-header button {
+  color: #ffffff;
+}
+
+.card .card-header .dropdown-toggle::after {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

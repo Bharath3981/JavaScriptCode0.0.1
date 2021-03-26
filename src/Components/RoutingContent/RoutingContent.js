@@ -6,6 +6,7 @@ import React from 'react';
 class RoutingContent extends React.Component {
   render() {
     return (
+      <div className="jsc-content-space">
       <Switch>
         <Route path="/javascript">
           <JavaScriptTopic />
@@ -16,6 +17,7 @@ class RoutingContent extends React.Component {
         
         <Route path="/datastructures" component={DataStructuresTopic}></Route>
       </Switch>
+      </div>
     );
   }
 }

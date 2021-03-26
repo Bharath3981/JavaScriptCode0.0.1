@@ -26,11 +26,8 @@ export default function Editor( props ) {
                 lineWrapping: true,
                 ling: true,
                 mode: language,
-                theme: 'material',
                 lineNumbers: true
-            }}
-        >
-
+            }}>
         </ControlledEditor>
     );
 }

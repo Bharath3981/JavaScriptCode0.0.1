@@ -34,29 +34,29 @@ export default function EditorView() {
     
     return (
         <Row>
-            <Col md={6} sm={12}>
+            <Col md={7} sm={12}>
                 <Tabs id="editor-tabs" transition={false} className="jsc-theme-tabs" activeKey={editorTab} onSelect={(k) => setEditorTab(k)}>
-                    <Tab eventKey="html" title={<span><span><DiHtml5 /></span><span> HTML</span></span>}>
+                    <Tab eventKey="html" title={<span><span><DiHtml5 /></span><span className="d-none d-sm-inline"> HTML</span></span>}>
                         <Editor language="xml" value={html} onChage={setHtml}>
                         </Editor>
                     </Tab>
-                    <Tab eventKey="profile" title={<span><span><DiCss3 /></span><span> CSS</span></span>}>
+                    <Tab eventKey="profile" title={<span><span><DiCss3 /></span><span className="d-none d-sm-inline"> CSS</span></span>}>
                     <Editor language="css" value={css} onChage={setCss}>
                         </Editor>
                     </Tab>
-                    <Tab eventKey="contact" title={<span><span><DiJavascript /></span><span> JavaScript</span></span>}>
+                    <Tab eventKey="contact" title={<span><span><DiJavascript /></span><span className="d-none d-sm-inline"> JavaScript</span></span>}>
                     <Editor language="javascript" value={javascript} onChage={setJavascript}>
                         </Editor>
                     </Tab>
                 </Tabs>
             </Col>
-            <Col md={6} sm={12}>
+            <Col md={5} sm={12}>
             <Tabs id="controlled-tab-example" transition={false} className="jsc-theme-tabs run" activeKey={runTab} onSelect={(k) => setRunTab(k)}>
-                    <Tab eventKey="display" title={<span><span><BsDisplayFill /></span><span> Display</span></span>}>
+                    <Tab eventKey="display" title={<span><span><BsDisplayFill /></span><span className="d-none d-sm-inline"> Display</span></span>}>
                         <iframe srcDoc={srcDoc}  title="output" sandbox="allow-scripts" frameBorder="0" 
                         width="100%" height="100%"></iframe>
                     </Tab>
-                    <Tab eventKey="console" title={<span><span><VscDebugConsole /></span><span> Console</span></span>}>
+                    <Tab eventKey="console" title={<span><span><VscDebugConsole /></span><span className="d-none d-sm-inline"> Console</span></span>}>
                         COnsole
                     </Tab>
                 </Tabs>
