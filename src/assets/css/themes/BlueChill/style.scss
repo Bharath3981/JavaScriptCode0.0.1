@@ -139,6 +139,8 @@ body {
     }
     .nav-item:hover, .nav-item.active {
         color: $theme-active-text-color;
+        border-color: $theme-active-text-color;
+        border-bottom: none;
     }
     .nav-link {
         
@@ -147,7 +149,7 @@ body {
     }
 }
 .tab-content {
-    border: 1px solid #dee2e6;
+    border: 1px solid $theme-active-text-color;
     border-radius: $theme-border-radius;
     .tab-pane {
         height: 400px;

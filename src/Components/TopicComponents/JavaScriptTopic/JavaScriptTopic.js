@@ -15,7 +15,6 @@ class JavaScriptTopic extends React.Component {
       { topicId: 2, topicIcon: GrInherit, topicLabel: 'Prototype', subTopic: 'javascript/prototype'}
     ];
     this.context.setLeftNavMenus(topics);
-    console.log(this.context);
   }
 
   render() {

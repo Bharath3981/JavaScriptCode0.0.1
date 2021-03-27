@@ -14,9 +14,9 @@ import Editor from './Editor';
 export default function EditorView() {
     const [editorTab, setEditorTab] = useState('html');
     const [runTab, setRunTab] = useState('display');
-    const [html, setHtml] = useState('');
+    const [html, setHtml] = useState('<div></div>');
     const [css, setCss] = useState('');
-    const [javascript, setJavascript] = useState('console.log("Hi")');
+    const [javascript, setJavascript] = useState('console.log("Hi");');
     const [srcDoc, setSrcDoc] = useState();
 
     useEffect(() => {
@@ -37,15 +37,15 @@ export default function EditorView() {
             <Col md={7} sm={12}>
                 <Tabs id="editor-tabs" transition={false} className="jsc-theme-tabs" activeKey={editorTab} onSelect={(k) => setEditorTab(k)}>
                     <Tab eventKey="html" title={<span><span><DiHtml5 /></span><span className="d-none d-sm-inline"> HTML</span></span>}>
-                        <Editor language="xml" value={html} onChage={setHtml}>
+                        <Editor language="xml" value={html} editorType="HTML" onChage={setHtml}>
                         </Editor>
                     </Tab>
                     <Tab eventKey="profile" title={<span><span><DiCss3 /></span><span className="d-none d-sm-inline"> CSS</span></span>}>
-                    <Editor language="css" value={css} onChage={setCss}>
+                        <Editor language="css" value={css} editorType="CSS" onChage={setCss}>
                         </Editor>
                     </Tab>
                     <Tab eventKey="contact" title={<span><span><DiJavascript /></span><span className="d-none d-sm-inline"> JavaScript</span></span>}>
-                    <Editor language="javascript" value={javascript} onChage={setJavascript}>
+                        <Editor language="javascript" value={javascript} editorType="JS" onChage={setJavascript}>
                         </Editor>
                     </Tab>
                 </Tabs>
@@ -53,7 +53,7 @@ export default function EditorView() {
             <Col md={5} sm={12}>
             <Tabs id="controlled-tab-example" transition={false} className="jsc-theme-tabs run" activeKey={runTab} onSelect={(k) => setRunTab(k)}>
                     <Tab eventKey="display" title={<span><span><BsDisplayFill /></span><span className="d-none d-sm-inline"> Display</span></span>}>
-                        <iframe srcDoc={srcDoc}  title="output" sandbox="allow-scripts" frameBorder="0" 
+                        <iframe srcDoc={srcDoc}  title="output" frameBorder="0" 
                         width="100%" height="100%"></iframe>
                     </Tab>
                     <Tab eventKey="console" title={<span><span><VscDebugConsole /></span><span className="d-none d-sm-inline"> Console</span></span>}>

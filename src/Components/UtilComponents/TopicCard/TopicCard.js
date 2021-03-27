@@ -1,6 +1,6 @@
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 class TopicCard extends React.Component {
   render() {

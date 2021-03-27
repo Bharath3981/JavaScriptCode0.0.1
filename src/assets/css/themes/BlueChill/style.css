@@ -113,6 +113,8 @@ body {
 
 .jsc-theme-tabs.nav-tabs .nav-item:hover, .jsc-theme-tabs.nav-tabs .nav-item.active {
   color: #346CB0;
+  border-color: #346CB0;
+  border-bottom: none;
 }
 
 .jsc-theme-tabs.nav-tabs .nav-link {
@@ -121,7 +123,7 @@ body {
 }
 
 .tab-content {
-  border: 1px solid #dee2e6;
+  border: 1px solid #346CB0;
   border-radius: 4px;
 }
 
