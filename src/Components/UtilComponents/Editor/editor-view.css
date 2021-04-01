@@ -1,0 +1,39 @@
+#consoleWindow * {
+  font-family: Menlo, monospace;
+}
+
+#consoleWindow {
+  height: 100%;
+  overflow: scroll;
+}
+
+#consoleWindow ul {
+  padding: 0;
+}
+
+#consoleWindow ul li {
+  line-height: 1.2;
+  list-style: none;
+  padding-left: 15px;
+}
+
+#consoleWindow ul hr {
+  margin: 0;
+}
+
+#consoleWindow .console-header {
+  background-color: #F0F0F0;
+  padding-left: 15px;
+  border-bottom: 1px solid #9d9d9d;
+}
+
+#consoleWindow .console-header span {
+  float: right;
+  padding-right: 5px;
+  color: red;
+}
+
+#consoleWindow .console-header span:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=editor-view.css.map */
