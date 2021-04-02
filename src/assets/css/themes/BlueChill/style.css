@@ -53,7 +53,7 @@ body {
 }
 
 .navbar.navbar-top {
-  border-bottom: 1px solid #5e6e82;
+  border-bottom: 1px solid #346CB0;
 }
 
 .user-menu {
@@ -111,10 +111,14 @@ body {
   color: #5e6e82;
 }
 
-.jsc-theme-tabs.nav-tabs .nav-item:hover, .jsc-theme-tabs.nav-tabs .nav-item.active {
+.jsc-theme-tabs.nav-tabs .nav-item.active {
   color: #346CB0;
   border-color: #346CB0;
   border-bottom: none;
+}
+
+.jsc-theme-tabs.nav-tabs .nav-item:hover {
+  color: #346CB0;
 }
 
 .jsc-theme-tabs.nav-tabs .nav-link {

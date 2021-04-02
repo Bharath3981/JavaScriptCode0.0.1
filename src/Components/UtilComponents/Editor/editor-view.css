@@ -17,6 +17,15 @@
   padding-left: 15px;
 }
 
+#consoleWindow ul li .json-formatter-row span {
+  font-style: italic;
+  font-size: 13px;
+}
+
+#consoleWindow ul li .json-formatter-row span .json-formatter-string {
+  font-style: normal;
+}
+
 #consoleWindow ul hr {
   margin: 0;
 }
@@ -25,6 +34,7 @@
   background-color: #F0F0F0;
   padding-left: 15px;
   border-bottom: 1px solid #9d9d9d;
+  font-weight: 800;
 }
 
 #consoleWindow .console-header span {

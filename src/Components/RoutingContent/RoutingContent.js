@@ -2,6 +2,7 @@ import {  Switch, Route, Redirect } from 'react-router-dom';
 import JavaScriptTopic from '../TopicComponents/JavaScriptTopic/JavaScriptTopic';
 import DataStructuresTopic from '../TopicComponents/DataStructuresTopic/DataStructuresTopic';
 import React from 'react';
+import HtmlEditor from '../HtmlEditor/HtmlEditor';
 
 class RoutingContent extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class RoutingContent extends React.Component {
         </Route>
         
         <Route path="/datastructures" component={DataStructuresTopic}></Route>
+        <Route path="/editor" component={HtmlEditor}></Route>
       </Switch>
       </div>
     );

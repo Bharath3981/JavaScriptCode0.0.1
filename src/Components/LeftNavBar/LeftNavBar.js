@@ -7,7 +7,7 @@ import { AppContext } from '../../AppContext/AppContext';
 
 class LeftNavBar extends React.Component {
   static contextType = AppContext;
-  render( ) {
+  render() {
     return (
       <nav className="navbar navbar-light navbar-vertical navbar-expand-xl">
         <div className="d-flex align-items-center jsc-logo-content">

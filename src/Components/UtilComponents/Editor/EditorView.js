@@ -55,7 +55,9 @@ export default function EditorView() {
     });
 
     window.getMessage = function(message) {
-        return new JSONFormatter(message, 0).render();
+        return new JSONFormatter(message, 0, {
+            hoverPreviewEnabled: true
+        }).render();
     }
 
     return (
@@ -93,7 +95,6 @@ export default function EditorView() {
                                 
                             </ul>
                         </div>
-                        {/* <JSConsole></JSConsole> */}
                     </Tab>
                 </Tabs>
             </Col>
