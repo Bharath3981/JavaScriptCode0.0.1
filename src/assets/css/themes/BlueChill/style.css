@@ -9,6 +9,10 @@ body {
 
 .jsc-content-space {
   padding-top: 10px;
+  line-height: 32px;
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 21px;
+  text-align: justify;
 }
 
 .ms-auto {
