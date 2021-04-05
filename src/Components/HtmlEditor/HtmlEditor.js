@@ -37,9 +37,9 @@ class HtmlEditor extends React.Component {
             {text: 'C++', value: 'cpp'}
           ],
           toolbar:
-            'undo redo | formatselect | bold italic | \
+            `undo redo | formatselect | bold italic | \
             alignleft aligncenter alignright | \
-            bullist numlist outdent indent | help | codesample code'
+            bullist numlist outdent indent | help | codesample code`
         }}
         onChange={this.handleEditorChange}
       />

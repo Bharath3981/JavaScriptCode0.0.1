@@ -11,8 +11,43 @@ class JavaScriptTopic extends React.Component {
   static contextType = AppContext;
   componentDidMount() {
     const topics = [
-      { topicId: 1, topicIcon: FaHistory, topicLabel: 'History', subTopic: 'javascript'},
-      { topicId: 2, topicIcon: GrInherit, topicLabel: 'Prototype', subTopic: 'javascript/prototype'}
+      { 
+        id: 1, 
+        icon: FaHistory, 
+        label: 'History', 
+        path: 'javascript',subTopics: [
+          {
+            id: 101, 
+            icon: GrInherit, 
+            label: 'Prototype1', 
+            path: 'javascript/prototype1',
+          },{
+            id: 102, 
+            icon: GrInherit, 
+            label: 'Prototype2', 
+            path: 'javascript/prototype2',
+          }
+        ]
+      },
+      { 
+        id: 2, 
+        icon: GrInherit, 
+        label: 'Prototype', 
+        path: 'javascript/prototype',
+        subTopics: [
+          {
+            id: 201, 
+            icon: GrInherit, 
+            label: 'Prototype1', 
+            path: 'javascript/prototype1',
+          },{
+            id: 202, 
+            icon: GrInherit, 
+            label: 'Prototype2', 
+            path: 'javascript/prototype2',
+          }
+        ]
+      }
     ];
     this.context.setLeftNavMenus(topics);
   }

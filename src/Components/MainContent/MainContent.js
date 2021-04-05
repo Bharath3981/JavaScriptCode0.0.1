@@ -5,16 +5,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 class MainContent extends React.Component {
   render() {
-    // const [toggleTopNavBar, setToggleTopNavBar] = useState(false);
-    // function toggleCollpase( value ) {
-    //   setToggleTopNavBar( value );
-    // }
     return (
       <main id="top">
         <div className="container-fluid" data-layout="container">
           <Router>
-          <LeftNavBar /*sharedData={{toggleTopNavBar: toggleTopNavBar}}*/></LeftNavBar>
-          <ViewContent /*sharedData={{toggleCollpase: toggleCollpase, toggleTopNavBar: toggleTopNavBar}}*/></ViewContent>
+          <LeftNavBar></LeftNavBar>
+          <ViewContent></ViewContent>
           </Router>
         </div>
       </main>

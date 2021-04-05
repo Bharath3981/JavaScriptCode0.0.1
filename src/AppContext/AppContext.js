@@ -11,6 +11,7 @@ export default class AppContextProvider extends Component {
         setToggleLeftNav: ( value ) => {
             this.setState({toggleLeftNav: value});
         },
+        previousState: undefined
     };
     
 

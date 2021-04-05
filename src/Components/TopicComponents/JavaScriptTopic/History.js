@@ -4,6 +4,10 @@ import renderHTML from 'react-render-html';
 //import EditorView from '../../UtilComponents/Editor/EditorView';
 
 class History extends React.Component {
+
+  componentDidMount() {
+    document.title = "History";
+  }
   
   render() {
     return (

@@ -12,9 +12,9 @@ class DataStructuresTopic extends React.Component {
   static contextType = AppContext;
   componentDidMount() {
     const topics = [
-      { topicId: 1, topicIcon: BsViewStacked, topicLabel: 'Stacks', subTopic: 'datastructures'},
-      { topicId: 2, topicIcon: MdViewArray, topicLabel: 'Queues', subTopic: 'datastructures/queues'},
-      { topicId: 3, topicIcon: BiLink, topicLabel: 'Linked List', subTopic: 'datastructures/linkedlist'}
+      { id: 1, icon: BsViewStacked, label: 'Stacks', path: 'datastructures'},
+      { id: 2, icon: MdViewArray, label: 'Queues', path: 'datastructures/queues'},
+      { id: 3, icon: BiLink, label: 'Linked List', path: 'datastructures/linkedlist'}
     ];
     this.context.setLeftNavMenus(topics);
     console.log(this.context);

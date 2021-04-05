@@ -26,6 +26,14 @@ body {
     font-size: 21px;
     text-align: justify;
 }
+.jsc-icon-rotation-180 {
+    transform: translate3d(0%, 18%, 0) rotate(-180deg);
+    transition: 0.5s;
+}
+.jsc-icon-rotation-0 {
+    transform: translate3d(0%, 18%, 0) rotate(0deg);
+    transition: 0.5s;
+}
 .ms-auto {
     margin-left: auto !important;
 }
@@ -88,6 +96,8 @@ body {
                 background: $theme-active-text-color;
                 color: white;
                 text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
             }
             a {
                 padding: 5px;
@@ -96,6 +106,8 @@ body {
                 background: transparent;
                 color: $theme-font-color;
                 text-decoration: none;
+                font-size: 0.8125rem;
+                flex-flow: column nowrap;
             }
         }
     }
@@ -107,12 +119,21 @@ body {
                 font-weight: $theme-font-weight;
                 font-size: $theme-font-size;
                 color: $theme-font-color;
+                font-weight: 700;
+                font-size: 14px;
                 a {
-                    color: $theme-active-text-color !important;
+                    color: $theme-active-text-color !important; 
                 }
             }
             a {
                 color: $theme-font-color;
+                font-size: 0.8125rem;
+                flex-flow: column nowrap;
+            }
+            .nav {
+                .nav-link {
+                    padding: 0.3rem 1.8rem;
+                }
             }
         }
     }

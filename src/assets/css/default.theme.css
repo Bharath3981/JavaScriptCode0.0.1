@@ -19080,18 +19080,15 @@ h5,
     flex-flow: column nowrap;
     font-size: 0.8125rem;
 }
-.navbar-vertical .navbar-nav .nav .nav-item .nav-link {
+/* .navbar-vertical .navbar-nav .nav .nav-item .nav-link {
     padding: 0.2rem 0.2rem 0.2rem 1.5rem;
-}
-.navbar-vertical .navbar-nav .nav .nav-item:last-child {
-    margin-bottom: 0.35rem;
 }
 .navbar-vertical .navbar-nav .nav .nav .nav-item .nav-link {
     padding-left: 2.625rem;
 }
 .navbar-vertical .navbar-nav .nav .nav .nav .nav-item .nav-link {
     padding-left: 4.125rem;
-}
+} */
 .navbar-vertical.navbar-card,
 .navbar-vertical.navbar-vibrant,
 .navbar-vertical.navbar-inverted {
@@ -19433,13 +19430,13 @@ h5,
     .navbar-vertical-collapsed .navbar-vertical.navbar-expand-xxl.navbar-inverted + .content .navbar-top {
         padding-left: 12.375rem;
     }
-    .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .navbar-collapse,
+    /* .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .navbar-collapse,
     .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .nav.collapse.show,
     .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .nav-link .badge,
     .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .settings,
     .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .nav-link-text {
         display: none;
-    }
+    } */
     .navbar-vertical-collapsed:not(.navbar-vertical-collapsed-hover) .navbar-vertical.navbar-expand-xxl .navbar-vertical-divider {
         max-width: 2rem;
     }
