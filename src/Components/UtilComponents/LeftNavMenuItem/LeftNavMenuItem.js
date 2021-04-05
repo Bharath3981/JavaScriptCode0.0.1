@@ -9,7 +9,6 @@ class LeftNavMenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {subTopic: false};
-    let previousState = undefined;
   }
   componentDidMount() {
   }
@@ -31,7 +30,7 @@ class LeftNavMenuItem extends React.Component {
 
     return (
       <li className="nav-item">
-        <NavLink to={'/'+this.props.data.topic.path} className="nav-link" 
+        <NavLink to={ this.props.data.topic.subTopics? '': '/'+this.props.data.topic.path} className="nav-link" 
           onClick={()=> leftNavClickHandler( this.props.data.topic.subTopics? true: false )} role="button" exact={true} activeClassName="active">
           <div className="d-flex align-items-center">
             <span className="nav-link-icon">{this.props.data.topic.icon()}</span>

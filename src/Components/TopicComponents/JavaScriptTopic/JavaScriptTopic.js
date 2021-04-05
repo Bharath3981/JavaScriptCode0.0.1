@@ -15,31 +15,19 @@ class JavaScriptTopic extends React.Component {
         id: 1, 
         icon: FaHistory, 
         label: 'History', 
-        path: 'javascript',subTopics: [
-          {
-            id: 101, 
-            icon: GrInherit, 
-            label: 'Prototype1', 
-            path: 'javascript/prototype1',
-          },{
-            id: 102, 
-            icon: GrInherit, 
-            label: 'Prototype2', 
-            path: 'javascript/prototype2',
-          }
-        ]
+        path: 'javascript'
       },
       { 
         id: 2, 
         icon: GrInherit, 
         label: 'Prototype', 
-        path: 'javascript/prototype',
+        path: 'javascript/',
         subTopics: [
           {
             id: 201, 
             icon: GrInherit, 
             label: 'Prototype1', 
-            path: 'javascript/prototype1',
+            path: 'javascript/prototype',
           },{
             id: 202, 
             icon: GrInherit, 

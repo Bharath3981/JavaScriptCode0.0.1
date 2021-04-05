@@ -25,6 +25,7 @@ body {
     font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 21px;
     text-align: justify;
+    word-break: break-word;
 }
 .jsc-icon-rotation-180 {
     transform: translate3d(0%, 18%, 0) rotate(-180deg);

@@ -22,10 +22,7 @@ class History extends React.Component {
         {renderHTML(`<h2>What is JavaScript ?</h2>
           <p>JavaScript is a scripting language that is one of the three core languages used to develop websites. Whereas HTML and CSS give a website structure and style, JavaScript lets you add functionality and behaviors to your website.</p>
           <p>JavaScript is primarily a client-side language, meaning it runs on your computer within your browser. However, more recently the introduction of Node.js has allowed JavaScript to also execute code on servers.</p>`)}
-        {/* Why is JavaScript */}
-        {renderHTML(`<h2>Why JavaScript ?</h2>
-          <p>There are many programming languages out there. Why should you use JavaScript?</p>`)}
-        
+           
       </TopicCard>
     );
   }
