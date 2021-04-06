@@ -20,7 +20,7 @@ export default function EditorView() {
     const [runTab, setRunTab] = useState('display');
     const [html, setHtml] = useState('<div></div>');
     const [css, setCss] = useState('');
-    const [javascript, setJavascript] = useState('console.log([1,2,3])');
+    const [javascript, setJavascript] = useState('console.log([1,2,3,0])');
     const [srcDoc, setSrcDoc] = useState();
 
     useEffect(() => {

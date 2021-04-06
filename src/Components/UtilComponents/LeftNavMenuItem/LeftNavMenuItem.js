@@ -16,7 +16,6 @@ class LeftNavMenuItem extends React.Component {
   render() {
     
     const leftNavClickHandler = ( subTopicsAvailable ) => {
-      //this.setState( previousState => ({ subTopic: !previousState.subTopic }) );
       if( this.context.previousState ) {
         this.context.previousState.setState({subTopic: false});
       }
@@ -30,14 +29,27 @@ class LeftNavMenuItem extends React.Component {
 
     return (
       <li className="nav-item">
-        <NavLink to={ this.props.data.topic.subTopics? '': '/'+this.props.data.topic.path} className="nav-link" 
-          onClick={()=> leftNavClickHandler( this.props.data.topic.subTopics? true: false )} role="button" exact={true} activeClassName="active">
-          <div className="d-flex align-items-center">
-            <span className="nav-link-icon">{this.props.data.topic.icon()}</span>
-            <span className="nav-link-text ps-1">{this.props.data.topic.label}</span>
-            {this.props.data.topic.subTopics && <span className={this.state.subTopic? 'ms-auto jsc-icon-rotation-180': 'ms-auto jsc-icon-rotation-0'}><BsChevronDown /></span>}
-          </div>
-        </NavLink>
+        { this.props.data.topic.subTopics && 
+          <a className="nav-link" role="button" href="#?" 
+            onClick={()=> leftNavClickHandler( true )}>
+            <div className="d-flex align-items-center">
+              <span className="nav-link-icon">{this.props.data.topic.icon()}</span>
+              <span className="nav-link-text ps-1">{this.props.data.topic.label}</span>
+              <span className={this.state.subTopic? 'ms-auto jsc-icon-rotation-180': 'ms-auto jsc-icon-rotation-0'}><BsChevronDown /></span>
+            </div>
+          </a> 
+        }
+        { !this.props.data.topic.subTopics && 
+          <NavLink to={'/'+this.props.data.topic.path} className="nav-link" 
+            onClick={()=> leftNavClickHandler( false )} role="button" exact={true} activeClassName="active">
+            <div className="d-flex align-items-center">
+              <span className="nav-link-icon">{this.props.data.topic.icon()}</span>
+              <span className="nav-link-text ps-1">{this.props.data.topic.label}</span>
+              {this.props.data.topic.subTopics && <span className={this.state.subTopic? 'ms-auto jsc-icon-rotation-180': 'ms-auto jsc-icon-rotation-0'}><BsChevronDown /></span>}
+            </div>
+          </NavLink>
+        }
+        
         <Collapse appear={true}  in={this.state.subTopic} >
           <ul className="nav" id="email">
           { this.props.data.topic.subTopics &&

@@ -27,7 +27,7 @@ class JavaScriptTopic extends React.Component {
         subTopics: [
           {
             id: 201, 
-            label: 'What is an array?', 
+            label: 'Array', 
             path: 'javascript/arrays',
           }
         ]

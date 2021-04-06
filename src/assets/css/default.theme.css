@@ -19125,10 +19125,10 @@ h5,
 .navbar-vertical .navbar-nav .nav-item .nav-link.dropdown-indicator:after {
     border-color: var(--bs-navbar-vertical-link-color);
 }
-.navbar-vertical .navbar-nav .nav-item .nav-link:hover,
+/* .navbar-vertical .navbar-nav .nav-item .nav-link:hover,
 .navbar-vertical .navbar-nav .nav-item .nav-link:focus {
     color: var(--bs-navbar-vertical-link-hover-color);
-}
+} */
 .navbar-vertical .navbar-nav .nav-item .nav-link:hover.dropdown-indicator:after,
 .navbar-vertical .navbar-nav .nav-item .nav-link:focus.dropdown-indicator:after {
     border-color: var(--bs-navbar-vertical-link-hover-color);
