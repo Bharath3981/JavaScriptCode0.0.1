@@ -4,15 +4,16 @@ import renderHTML from 'react-render-html';
 //import EditorView from '../../UtilComponents/Editor/EditorView';
 
 class History extends React.Component {
-
+  
   componentDidMount() {
-    document.title = "History";
+    document.title = 'History';
+    
   }
   
   render() {
     return (
       <TopicCard params={{title: 'History'}}>
-        {/* <EditorView></EditorView> */}
+        
         {/* History Of the JavaScript */}
         {renderHTML(`<h2>History</h2>
           <p>The NCSA Mosaic web browser was released in 1993. As the first web browser with a GUI, it played a important role in the World Wide Web.&nbsp;The lead developers of Mosaic then founded the&nbsp;<a title="Netscape" href="https://en.wikipedia.org/wiki/Netscape">Netscape</a>&nbsp;corporation, which released a more polished browser,&nbsp;<a title="Netscape Navigator" href="https://en.wikipedia.org/wiki/Netscape_Navigator">Netscape Navigator</a>, in 1994. Netscape Navigator quickly became the most used browser.</p>
@@ -22,7 +23,7 @@ class History extends React.Component {
         {renderHTML(`<h2>What is JavaScript ?</h2>
           <p>JavaScript is a scripting language that is one of the three core languages used to develop websites. Whereas HTML and CSS give a website structure and style, JavaScript lets you add functionality and behaviors to your website.</p>
           <p>JavaScript is primarily a client-side language, meaning it runs on your computer within your browser. However, more recently the introduction of Node.js has allowed JavaScript to also execute code on servers.</p>`)}
-           
+         
       </TopicCard>
     );
   }

@@ -1,11 +1,13 @@
 import {  Switch, Route } from 'react-router-dom';
-import History  from '../JavaScriptTopic/History';
+import History  from './History';
 import Prototype  from '../JavaScriptTopic/Prototype';
 import React from 'react';
 import { AppContext } from '../../../AppContext/AppContext';
 
 import { FaHistory } from 'react-icons/fa';
 import { GrInherit } from 'react-icons/gr';
+import { RiBracketsFill } from 'react-icons/ri';
+import Arrays from './Arrays';
 
 class JavaScriptTopic extends React.Component {
   static contextType = AppContext;
@@ -19,22 +21,22 @@ class JavaScriptTopic extends React.Component {
       },
       { 
         id: 2, 
-        icon: GrInherit, 
-        label: 'Prototype', 
-        path: 'javascript/',
+        icon: RiBracketsFill, 
+        label: 'Arrays', 
+        path: '',
         subTopics: [
           {
             id: 201, 
-            icon: GrInherit, 
-            label: 'Prototype1', 
-            path: 'javascript/prototype',
-          },{
-            id: 202, 
-            icon: GrInherit, 
-            label: 'Prototype2', 
-            path: 'javascript/prototype2',
+            label: 'What is an array?', 
+            path: 'javascript/arrays',
           }
         ]
+      },
+      { 
+        id: 3, 
+        icon: GrInherit, 
+        label: 'Prototype', 
+        path: 'javascript/prototype'
       }
     ];
     this.context.setLeftNavMenus(topics);
@@ -44,6 +46,7 @@ class JavaScriptTopic extends React.Component {
     return ( 
       <Switch>
         <Route path="/javascript" exact component={History}></Route>
+        <Route path="/javascript/arrays" exact component={Arrays}></Route>
         <Route path="/javascript/prototype" exact component={Prototype}></Route>
       </Switch>
     );
