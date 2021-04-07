@@ -1,53 +1,56 @@
-#consoleWindow * {
+.jsc-editor * {
   font-family: Menlo, monospace;
 }
 
-#consoleWindow {
-  height: 100%;
+.console-window {
+  min-height: 175px;
+  max-height: 325px;
+  height: auto;
   overflow: scroll;
 }
 
-#consoleWindow ul {
+.console-window ul {
   padding: 0;
 }
 
-#consoleWindow ul li {
+.console-window ul li {
   line-height: 1.2;
   list-style: none;
   padding-left: 15px;
 }
 
-#consoleWindow ul li .json-formatter-row span {
+.console-window ul li .json-formatter-row span {
   font-style: italic;
   font-size: 13px;
 }
 
-#consoleWindow ul li .json-formatter-row span .json-formatter-string {
+.console-window ul li .json-formatter-row span .json-formatter-string {
   font-style: normal;
 }
 
-#consoleWindow ul hr {
+.console-window ul hr {
   margin: 0;
 }
 
-#consoleWindow .console-header {
+.console-window .console-header {
   background-color: #F0F0F0;
   padding-left: 15px;
   border-bottom: 1px solid #9d9d9d;
   font-weight: 800;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-#consoleWindow .console-header span {
+.console-window .console-header span {
   float: right;
   padding-right: 5px;
-  color: red;
 }
 
-#consoleWindow .console-header span:hover {
+.console-window .console-header span:hover {
   cursor: pointer;
 }
 
@@ -56,14 +59,43 @@
   line-height: 23px;
 }
 
-.jsc-editor #consoleWindow {
+.jsc-editor .console-window {
   border: 1px solid #9d9d9d;
-  border-radius: 4px;
+  border-radius: 5px;
+}
+
+.jsc-editor .js-editor-window {
+  border: 1px solid #9d9d9d;
+  border-radius: 5px;
+}
+
+.jsc-editor .js-editor-window .js-editor-header {
+  background-color: #F0F0F0;
+  padding-left: 15px;
+  border-bottom: 1px solid #9d9d9d;
+  font-weight: 800;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.jsc-editor .js-editor-window .js-editor-header span {
+  float: right;
+  padding-right: 5px;
+}
+
+.jsc-editor .js-editor-window .js-editor-header span:hover {
+  cursor: pointer;
 }
 
 .jsc-code-mirror-wrapper .CodeMirror-wrap {
   height: 150px;
+  max-height: 300px;
   border: 1px solid #9d9d9d;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 /*# sourceMappingURL=editor-view.css.map */

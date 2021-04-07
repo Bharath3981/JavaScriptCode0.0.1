@@ -19,7 +19,7 @@ export default function JSEditor(props) {
                 <script>
                 (function() {
                     var orgLog = console.log;
-                    let consoleElement = window.parent.document.querySelector('#consoleWindow ul');
+                    let consoleElement = window.parent.document.querySelector('.console-window ul');
                     if( consoleElement ) {
                         consoleElement.innerHTML = '';
                         console.log = function(message, data) {
@@ -51,15 +51,21 @@ export default function JSEditor(props) {
         <div className="jsc-editor js-editor">
         <Row>
             <Col md={7} sm={12}><script>{javascript}</script>
-                <Editor language="javascript" value={javascript} editorType="JS" onChage={setJavascript}>
-                </Editor>
+                <div className="js-editor-window">
+                    <div className="js-editor-header">JS Editor 
+                        <span style={{ color: "#1DA1F2" }} onClick={() => setJavascript('')}><GrClear /></span>
+                    </div>
+                    <Editor language="javascript" value={javascript} editorType="JS" onChage={setJavascript}>
+                    </Editor>
+                </div>
+                
             </Col>
             <Col md={5} sm={12}>
                 <iframe id="displayView" srcDoc={srcDoc} sandbox="allow-scripts allow-same-origin allow-modals"  title="output" frameBorder="0" 
                 width="100%" height="100%" className="d-none"></iframe>
-                <div id="consoleWindow">
+                <div className="console-window">
                     <div className="console-header">Console 
-                        <span style={{ color: "#1DA1F2" }} onClick={() => document.querySelector('#consoleWindow ul').innerHTML = ''}><GrClear /></span>
+                        <span style={{ color: "#1DA1F2" }} onClick={() => document.querySelector('.console-window ul').innerHTML = ''}><GrClear /></span>
                     </div>
                     <ul></ul>
                 </div>

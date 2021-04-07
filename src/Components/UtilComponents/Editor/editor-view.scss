@@ -1,8 +1,12 @@
-#consoleWindow * {
+$editor-border-radius: 5px;
+
+.jsc-editor * {
     font-family: Menlo, monospace;
 }
-#consoleWindow {
-    height: 100%;
+.console-window {
+    min-height: 175px;
+    max-height: 325px;
+    height: auto;
     overflow: scroll;
     ul {
         padding: 0;
@@ -27,35 +31,59 @@
         padding-left: 15px;
         border-bottom: 1px solid #9d9d9d;
         font-weight: 800;
+        border-top-left-radius: $editor-border-radius;
+        border-top-right-radius: $editor-border-radius;
         position: sticky;
         top: 0;
         z-index: 1000;
         span {
             float: right;
             padding-right: 5px;
-            color: red;
         }
         span:hover {
             cursor: pointer;
         }
     }
 }
+
 .jsc-editor {
     font-size: 13px;
     line-height: 23px;
-}
-.jsc-editor {
-    #consoleWindow {
+    .console-window {
         border: 1px solid #9d9d9d;
-        border-radius: 4px;
+        border-radius: $editor-border-radius;
+    }
+    .js-editor-window {
+        border: 1px solid #9d9d9d;
+        border-radius: $editor-border-radius;
+        .js-editor-header {
+            background-color: #F0F0F0;
+            padding-left: 15px;
+            border-bottom: 1px solid #9d9d9d;
+            font-weight: 800;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-top-left-radius: $editor-border-radius;
+            border-top-right-radius: $editor-border-radius;
+            span {
+                float: right;
+                padding-right: 5px;
+            }
+            span:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 //Editor Css
 .jsc-code-mirror-wrapper {
     .CodeMirror-wrap {
         height: 150px;
+        max-height: 300px;
         border: 1px solid #9d9d9d;
-        border-radius: 5px;
+        border-bottom-left-radius: $editor-border-radius;
+        border-bottom-right-radius: $editor-border-radius;
     }
 }
 //Editor Css
