@@ -7,7 +7,7 @@ body {
   min-height: 70px;
 }
 
-.jsc-content-space {
+.jsc-content-space:not(.jsc-editor) {
   padding-top: 10px;
   line-height: 32px;
   font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -193,10 +193,6 @@ body {
 }
 
 .tab-content .tab-pane {
-  height: 400px;
-}
-
-.jsc-code-mirror-wrapper .CodeMirror-wrap {
   height: 400px;
 }
 

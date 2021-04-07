@@ -27,6 +27,9 @@
         padding-left: 15px;
         border-bottom: 1px solid #9d9d9d;
         font-weight: 800;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
         span {
             float: right;
             padding-right: 5px;
@@ -37,4 +40,23 @@
         }
     }
 }
+.jsc-editor {
+    font-size: 13px;
+    line-height: 23px;
+}
+.jsc-editor {
+    #consoleWindow {
+        border: 1px solid #9d9d9d;
+        border-radius: 4px;
+    }
+}
+//Editor Css
+.jsc-code-mirror-wrapper {
+    .CodeMirror-wrap {
+        height: 150px;
+        border: 1px solid #9d9d9d;
+        border-radius: 5px;
+    }
+}
+//Editor Css
 

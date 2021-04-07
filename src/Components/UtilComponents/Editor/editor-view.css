@@ -35,6 +35,10 @@
   padding-left: 15px;
   border-bottom: 1px solid #9d9d9d;
   font-weight: 800;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 #consoleWindow .console-header span {
@@ -45,5 +49,21 @@
 
 #consoleWindow .console-header span:hover {
   cursor: pointer;
+}
+
+.jsc-editor {
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.jsc-editor #consoleWindow {
+  border: 1px solid #9d9d9d;
+  border-radius: 4px;
+}
+
+.jsc-code-mirror-wrapper .CodeMirror-wrap {
+  height: 150px;
+  border: 1px solid #9d9d9d;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=editor-view.css.map */

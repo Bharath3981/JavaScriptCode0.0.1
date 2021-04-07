@@ -19,7 +19,7 @@ body {
     background-color: $theme-color;
     min-height: 70px;
 }
-.jsc-content-space {
+.jsc-content-space:not(.jsc-editor) {
     padding-top: 10px;
     line-height: 32px;
     font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -214,14 +214,6 @@ body {
     }
 }
 // Editor Tabs
-
-//Editor Css
-.jsc-code-mirror-wrapper {
-    .CodeMirror-wrap {
-        height: 400px;
-    }
-}
-//Editor Css
 
 //Card Specific css
 .card {
