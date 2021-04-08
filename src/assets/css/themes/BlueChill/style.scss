@@ -26,6 +26,13 @@ body {
     font-size: 21px;
     text-align: justify;
     word-break: break-word;
+    .card {
+        .card-body {
+            h3 {
+                color: $theme-active-text-color;
+            }
+        }
+    }
 }
 @media (min-width: 100px) {
     .jsc-topic-image {

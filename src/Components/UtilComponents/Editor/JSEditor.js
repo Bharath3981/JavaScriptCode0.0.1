@@ -27,7 +27,6 @@ export default function JSEditor(props) {
                                     var liElement = document.createElement("li");
                                     orgLog(data);
                                     var textnode = document.createTextNode(message);
-                                    orgLog('Fired');
                                     liElement.appendChild(window.parent.window.getMessage(message));
                                     consoleElement.appendChild(liElement);
                                     consoleElement.appendChild(document.createElement("hr"));
@@ -66,7 +65,7 @@ export default function JSEditor(props) {
                         <span className="float-end" style={{ color: "#1DA1F2" }} title="Run" onClick={() => setJavascript('')}><GrClear /></span>
                     </div>
                     <Editor language="javascript" height={props.height} value={javascript} editorType="JS" 
-                        onChage={setJavascript} readOnly={!runMode}>
+                        onChage={setJavascript} readOnly={!runMode} styleActiveLine={runMode}>
                     </Editor>
                 </div>
                 

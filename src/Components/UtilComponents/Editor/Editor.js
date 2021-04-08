@@ -15,17 +15,17 @@ export default function Editor( props ) {
     const { language, value, onChage, editorType } = props;
     const editorHeight = props.height || '300px';
     const readOnly = props.readOnly || false;
+    const styleActiveLine = props.styleActiveLine;
     function handleChange( editor,data, value ) {
         onChage( value );
     }
     let editorOptions = {
         theme: 'material',
         lineNumbers: true,
-        autofocus: true,
+        autofocus: false,
         lineWrapping: true,
-        ling: true,
         mode: language,
-        styleActiveLine: true,
+        styleActiveLine: styleActiveLine,
         autoRefresh: true,
         readOnly: readOnly
     };

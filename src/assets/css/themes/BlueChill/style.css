@@ -16,6 +16,10 @@ body {
   word-break: break-word;
 }
 
+.jsc-content-space:not(.jsc-editor) .card .card-body h3 {
+  color: #346CB0;
+}
+
 @media (min-width: 100px) {
   .jsc-topic-image img {
     width: 100%;
