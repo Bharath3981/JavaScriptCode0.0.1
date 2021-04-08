@@ -2,37 +2,46 @@
   font-family: Menlo, monospace;
 }
 
-.console-window {
+.jsc-editor {
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.jsc-editor .console-window {
   min-height: 175px;
   max-height: 325px;
   height: auto;
   overflow: scroll;
+  border: 1px solid #9d9d9d;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
-.console-window ul {
+.jsc-editor .console-window ul {
   padding: 0;
 }
 
-.console-window ul li {
+.jsc-editor .console-window ul li {
   line-height: 1.2;
   list-style: none;
   padding-left: 15px;
 }
 
-.console-window ul li .json-formatter-row span {
+.jsc-editor .console-window ul li .json-formatter-row span {
   font-style: italic;
   font-size: 13px;
 }
 
-.console-window ul li .json-formatter-row span .json-formatter-string {
+.jsc-editor .console-window ul li .json-formatter-row span .json-formatter-string {
   font-style: normal;
 }
 
-.console-window ul hr {
+.jsc-editor .console-window ul hr {
   margin: 0;
 }
 
-.console-window .console-header {
+.jsc-editor .console-window .console-header {
   background-color: #F0F0F0;
   padding-left: 15px;
   border-bottom: 1px solid #9d9d9d;
@@ -45,23 +54,17 @@
   z-index: 1000;
 }
 
-.console-window .console-header span {
-  float: right;
+.jsc-editor .console-window .console-header span {
   padding-right: 5px;
 }
 
-.console-window .console-header span:hover {
+.jsc-editor .console-window .console-header span svg {
+  color: red;
+  font-size: 15px;
+}
+
+.jsc-editor .console-window .console-header span:hover {
   cursor: pointer;
-}
-
-.jsc-editor {
-  font-size: 13px;
-  line-height: 23px;
-}
-
-.jsc-editor .console-window {
-  border: 1px solid #9d9d9d;
-  border-radius: 5px;
 }
 
 .jsc-editor .js-editor-window {
@@ -83,19 +86,32 @@
 }
 
 .jsc-editor .js-editor-window .js-editor-header span {
-  float: right;
   padding-right: 5px;
+}
+
+.jsc-editor .js-editor-window .js-editor-header span svg {
+  color: green;
+  font-size: 15px;
 }
 
 .jsc-editor .js-editor-window .js-editor-header span:hover {
   cursor: pointer;
 }
 
+.jsc-editor.run-mode .jsc-code-mirror-wrapper .CodeMirror-wrap {
+  height: 300px !important;
+}
+
+.jsc-editor.run-mode .console-window {
+  height: 325px !important;
+}
+
 .jsc-code-mirror-wrapper .CodeMirror-wrap {
-  height: 150px;
   max-height: 300px;
   border: 1px solid #9d9d9d;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 /*# sourceMappingURL=editor-view.css.map */

@@ -50,7 +50,7 @@ class LeftNavMenuItem extends React.Component {
           </NavLink>
         }
         
-        <Collapse appear={true}  in={this.state.subTopic} >
+        <Collapse in={this.state.subTopic} >
           <ul className="nav" id="email">
           { this.props.data.topic.subTopics &&
             this.props.data.topic.subTopics.map( subTopic =>  

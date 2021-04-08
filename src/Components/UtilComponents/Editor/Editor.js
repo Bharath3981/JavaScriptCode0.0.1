@@ -13,6 +13,8 @@ import { Controlled as ControlledEditor } from 'react-codemirror2';
 
 export default function Editor( props ) {
     const { language, value, onChage, editorType } = props;
+    const editorHeight = props.height || '300px';
+    const readOnly = props.readOnly || false;
     function handleChange( editor,data, value ) {
         onChage( value );
     }
@@ -24,7 +26,8 @@ export default function Editor( props ) {
         ling: true,
         mode: language,
         styleActiveLine: true,
-        autoRefresh: true
+        autoRefresh: true,
+        readOnly: readOnly
     };
     if( editorType === 'HTML' ) {
         editorOptions.autoCloseTags = true;
@@ -35,9 +38,11 @@ export default function Editor( props ) {
     } 
     return (
         <ControlledEditor
+            editorDidMount={editor => { document.querySelector('.jsc-code-mirror-wrapper .CodeMirror-wrap').style.height = editorHeight; }}
             onBeforeChange={handleChange}
             value={value}
             className="jsc-code-mirror-wrapper"
+            height='500px'
             options={editorOptions}>
         </ControlledEditor>
     );

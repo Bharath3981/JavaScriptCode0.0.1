@@ -3,55 +3,56 @@ $editor-border-radius: 5px;
 .jsc-editor * {
     font-family: Menlo, monospace;
 }
-.console-window {
-    min-height: 175px;
-    max-height: 325px;
-    height: auto;
-    overflow: scroll;
-    ul {
-        padding: 0;
-        li {
-            line-height: 1.2;
-            list-style: none;
-            padding-left: 15px;
-            .json-formatter-row span  {
-                font-style: italic;
-                font-size: 13px;
-                .json-formatter-string {
-                    font-style: normal;
-                }
-            }
-        }
-        hr {
-            margin: 0;
-        }
-    }
-    .console-header {
-        background-color: #F0F0F0;
-        padding-left: 15px;
-        border-bottom: 1px solid #9d9d9d;
-        font-weight: 800;
-        border-top-left-radius: $editor-border-radius;
-        border-top-right-radius: $editor-border-radius;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        span {
-            float: right;
-            padding-right: 5px;
-        }
-        span:hover {
-            cursor: pointer;
-        }
-    }
-}
-
 .jsc-editor {
     font-size: 13px;
     line-height: 23px;
     .console-window {
+        min-height: 175px;
+        max-height: 325px;
+        height: auto;
+        overflow: scroll;
         border: 1px solid #9d9d9d;
         border-radius: $editor-border-radius;
+        transition: 300ms;
+        ul {
+            padding: 0;
+            li {
+                line-height: 1.2;
+                list-style: none;
+                padding-left: 15px;
+                .json-formatter-row span  {
+                    font-style: italic;
+                    font-size: 13px;
+                    .json-formatter-string {
+                        font-style: normal;
+                    }
+                }
+            }
+            hr {
+                margin: 0;
+            }
+        }
+        .console-header {
+            background-color: #F0F0F0;
+            padding-left: 15px;
+            border-bottom: 1px solid #9d9d9d;
+            font-weight: 800;
+            border-top-left-radius: $editor-border-radius;
+            border-top-right-radius: $editor-border-radius;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            span {
+                padding-right: 5px;
+                svg {
+                    color: red;
+                    font-size: 15px;
+                }
+            }
+            span:hover {
+                cursor: pointer;
+            }
+        }
     }
     .js-editor-window {
         border: 1px solid #9d9d9d;
@@ -67,8 +68,11 @@ $editor-border-radius: 5px;
             border-top-left-radius: $editor-border-radius;
             border-top-right-radius: $editor-border-radius;
             span {
-                float: right;
                 padding-right: 5px;
+                svg {
+                    color: green;
+                    font-size: 15px;
+                }
             }
             span:hover {
                 cursor: pointer;
@@ -76,14 +80,27 @@ $editor-border-radius: 5px;
         }
     }
 }
+
+.jsc-editor.run-mode {
+    .jsc-code-mirror-wrapper {
+        .CodeMirror-wrap {
+            height: 300px !important;
+        }
+    }
+    .console-window {
+        height: 325px !important;
+    }
+}
+
 //Editor Css
 .jsc-code-mirror-wrapper {
     .CodeMirror-wrap {
-        height: 150px;
+        //height: 150px;
         max-height: 300px;
         border: 1px solid #9d9d9d;
         border-bottom-left-radius: $editor-border-radius;
         border-bottom-right-radius: $editor-border-radius;
+        transition: 300ms;
     }
 }
 //Editor Css
