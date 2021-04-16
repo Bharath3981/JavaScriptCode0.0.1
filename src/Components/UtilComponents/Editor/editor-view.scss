@@ -9,11 +9,20 @@ $editor-border-radius: 5px;
     .console-window {
         min-height: 175px;
         max-height: 325px;
-        height: auto;
+        height: 325px;
         overflow: scroll;
         border: 1px solid #9d9d9d;
         border-radius: $editor-border-radius;
         transition: 300ms;
+        //New css
+        div[data-method="log"]  {
+            border-bottom: 1px solid #9d9d9d;
+            padding: 0px;
+            div[data-type="string"] {
+                color: black;
+            }
+        }
+        //New Css
         ul {
             padding: 0;
             li {
@@ -98,9 +107,18 @@ $editor-border-radius: 5px;
         //height: 150px;
         max-height: 300px;
         border: 1px solid #9d9d9d;
-        border-bottom-left-radius: $editor-border-radius;
-        border-bottom-right-radius: $editor-border-radius;
+        border-radius: $editor-border-radius;
         transition: 300ms;
+    }
+}
+#code-mirror-editor {
+    position: relative;
+    .play-button {
+        color: rgb(29, 161, 242);
+        position: absolute;
+        z-index: 1000;
+        top: -5px;
+        right: 0%;
     }
 }
 //Editor Css

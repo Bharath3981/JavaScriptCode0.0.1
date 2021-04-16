@@ -5,12 +5,24 @@ import arrayImg from './images/Array.svg';
 import JSEditor from '../../UtilComponents/Editor/JSEditor';
 import * as Code from './ArrayCodeSnippets';
 class Arrays extends React.Component {
-
+  constructor(props) {
+    super(props);
+    this.jsAccessingArrayConsole = React.createRef();
+  }
   componentDidMount() {
     document.title = 'Arrays';
   }
   
   render() {
+    // const editorConfig = {
+    //   defaultInputTab: 'js', 
+    //   defaultOutputTab : 'console',
+    //   showHtmlTab: true,
+    //   showCssTab: true,
+    //   showJsTab: true,
+    //   showDisplayTab: true,
+    //   showConsoleTab: true
+    // };
     return (
       <TopicCard params={{title: 'Array'}}>
         {/* Arrays */}
@@ -20,12 +32,14 @@ class Arrays extends React.Component {
         
         {/* Creating an Array */}
         { renderHTML(`<h3><strong>Creating an Array</strong></h3><p>There are two syntaxes for creating an array.</p>`)}
-        <JSEditor value={Code.CREATING_ARRAY} height='110px'></JSEditor>
+          
+          <JSEditor value={Code.CREATING_ARRAY1} uniqueId={'jsAccessingArray'} height='110px'></JSEditor>
 
         {/* Accessing an Array elements */}
         { renderHTML(`<h3><strong>Accessing array elements</strong></h3>
           <p>JavaScript arrays are zero-indexed. The first element of an array is at index&nbsp;<code>0</code>, and the last element is the lenght of the array.</p>`)}
-        <JSEditor value={Code.ACCESSING_ARRAY} height='110px'></JSEditor>
+          {/* <JSEditor value={Code.ACCESSING_ARRAY} uniqueId={'jsCreatingArray'} scriptElement={this.scriptRunContentArea} height='110px'></JSEditor> */}
+        {/* <EditorView config={editorConfig}></EditorView> */}
       </TopicCard>
     );
   }

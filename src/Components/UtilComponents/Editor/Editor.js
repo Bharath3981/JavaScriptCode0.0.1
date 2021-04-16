@@ -16,6 +16,7 @@ export default function Editor( props ) {
     const editorHeight = props.height || '300px';
     const readOnly = props.readOnly || false;
     const styleActiveLine = props.styleActiveLine;
+    const uniqueId = props.uniqueId;
     function handleChange( editor,data, value ) {
         onChage( value );
     }
@@ -37,13 +38,15 @@ export default function Editor( props ) {
         editorOptions.autoCloseBrackets = true;
     } 
     return (
-        <ControlledEditor
-            editorDidMount={editor => { document.querySelector('.jsc-code-mirror-wrapper .CodeMirror-wrap').style.height = editorHeight; }}
-            onBeforeChange={handleChange}
-            value={value}
-            className="jsc-code-mirror-wrapper"
-            height='500px'
-            options={editorOptions}>
-        </ControlledEditor>
+        <div id="code-mirror-editor">
+            <ControlledEditor
+                editorDidMount={(editor) => { document.querySelector(`.${uniqueId}.jsc-code-mirror-wrapper .CodeMirror-wrap`).style.height = editorHeight;}}
+                onBeforeChange={handleChange}
+                value={value}
+                className={uniqueId+" jsc-code-mirror-wrapper"}
+                height={editorHeight}
+                options={editorOptions}>
+            </ControlledEditor>
+        </div>
     );
 }

@@ -111,7 +111,7 @@ body {
   padding: 0px 7px;
 }
 
-.navbar .navbar-nav.topics li a:hover, .navbar .navbar-nav.topics li a.active {
+.navbar .navbar-nav.topics li a.active {
   padding: 5px;
   border: 1px solid #346CB0;
   border-radius: 5px;
@@ -120,6 +120,15 @@ body {
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
+}
+
+.navbar .navbar-nav.topics li a:hover {
+  padding: 5px;
+  border: 1px solid #346CB0;
+  border-radius: 5px;
+  background: #346CB0;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar .navbar-nav.topics li a {
@@ -167,39 +176,6 @@ body {
   width: 0px;
 }
 
-.jsc-theme-tabs.nav-tabs {
-  margin: 0;
-}
-
-.jsc-theme-tabs.nav-tabs .nav-item {
-  padding: 3px 8px;
-  color: #5e6e82;
-}
-
-.jsc-theme-tabs.nav-tabs .nav-item.active {
-  color: #346CB0;
-  border-color: #346CB0;
-  border-bottom: none;
-}
-
-.jsc-theme-tabs.nav-tabs .nav-item:hover {
-  color: #346CB0;
-}
-
-.jsc-theme-tabs.nav-tabs .nav-link {
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.tab-content {
-  border: 1px solid #346CB0;
-  border-radius: 4px;
-}
-
-.tab-content .tab-pane {
-  height: 400px;
-}
-
 .card {
   -webkit-box-shadow: 0px 0px 5px 2px #dee2e6;
           box-shadow: 0px 0px 5px 2px #dee2e6;
@@ -216,5 +192,10 @@ body {
 
 .card .card-header .dropdown-toggle::after {
   display: none;
+}
+
+.jsc-code-mirror-wrapper {
+  font-size: 13px;
+  line-height: 23px;
 }
 /*# sourceMappingURL=style.css.map */

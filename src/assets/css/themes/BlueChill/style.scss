@@ -126,7 +126,7 @@ body {
     .navbar-nav.topics { 
         li {
             padding: 0px 7px;
-            a:hover, a.active {
+            a.active {
                 padding: 5px;
                 border: 1px solid $theme-active-text-color;
                 border-radius: 5px;
@@ -135,6 +135,14 @@ body {
                 text-decoration: none;
                 font-weight: 700;
                 font-size: 14px;
+            }
+            a:hover {
+                padding: 5px;
+                border: 1px solid $theme-active-text-color;
+                border-radius: 5px;
+                background: $theme-active-text-color;
+                color: white;
+                text-decoration: none;
             }
             a {
                 padding: 5px;
@@ -193,33 +201,7 @@ body {
   
 
 // Editor Tabs
-.jsc-theme-tabs.nav-tabs {
-    margin: 0;
-    .nav-item {
-        padding: 3px 8px;
-        color: $theme-font-color;
-    }
-    .nav-item.active {
-        color: $theme-active-text-color;
-        border-color: $theme-active-text-color;
-        border-bottom: none;
-    }
-    .nav-item:hover {
-        color: $theme-active-text-color;
-    }
-    .nav-link {
-        
-        font-weight: $theme-font-weight;
-        font-size: $theme-font-size;
-    }
-}
-.tab-content {
-    border: 1px solid $theme-active-text-color;
-    border-radius: $theme-border-radius;
-    .tab-pane {
-        height: 400px;
-    }
-}
+
 // Editor Tabs
 
 //Card Specific css
@@ -238,4 +220,10 @@ body {
     
 }
 //Card specific css
+
+//Code mirror Css
+.jsc-code-mirror-wrapper {
+    font-size: 13px;
+    line-height: 23px;
+}
   

@@ -10,12 +10,21 @@
 .jsc-editor .console-window {
   min-height: 175px;
   max-height: 325px;
-  height: auto;
+  height: 325px;
   overflow: scroll;
   border: 1px solid #9d9d9d;
   border-radius: 5px;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.jsc-editor .console-window div[data-method="log"] {
+  border-bottom: 1px solid #9d9d9d;
+  padding: 0px;
+}
+
+.jsc-editor .console-window div[data-method="log"] div[data-type="string"] {
+  color: black;
 }
 
 .jsc-editor .console-window ul {
@@ -109,9 +118,20 @@
 .jsc-code-mirror-wrapper .CodeMirror-wrap {
   max-height: 300px;
   border: 1px solid #9d9d9d;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+#code-mirror-editor {
+  position: relative;
+}
+
+#code-mirror-editor .play-button {
+  color: #1da1f2;
+  position: absolute;
+  z-index: 1000;
+  top: -5px;
+  right: 0%;
 }
 /*# sourceMappingURL=editor-view.css.map */
