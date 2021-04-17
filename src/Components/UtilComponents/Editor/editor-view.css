@@ -134,4 +134,8 @@
   top: -5px;
   right: 0%;
 }
+
+.json-formatter-row {
+  display: inline;
+}
 /*# sourceMappingURL=editor-view.css.map */

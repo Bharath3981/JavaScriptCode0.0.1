@@ -20,8 +20,9 @@ export default class JSEditor extends React.Component {
     constructor(props) {
         super(props);
         this._isMounted = false;
+        this.jsConsoleWindow = React.createRef();
         this.state = {
-            javascript: 'console.log([1,2,3,4,9])',
+            javascript: this.props.value,
             logs: [],
             runMode: false,
             srcDoc: ``
@@ -46,7 +47,7 @@ export default class JSEditor extends React.Component {
     render() {
         window.getMessage = function(message) {
             return new JSONFormatter(message, 0, {
-                hoverPreviewEnabled: true
+                hoverPreviewEnabled: false
             }).render();
         }
         const setJavascript = ( jsString ) => {
@@ -67,7 +68,7 @@ export default class JSEditor extends React.Component {
         //}
     
         return (
-            <div className={true || this.state.runMode? 'jsc-editor js-editor run-mode': 'jsc-editor js-editor'}>
+            <div className={this.state.runMode? 'jsc-editor js-editor run-mode': 'jsc-editor js-editor'}>
             <Row>
                 <Col md={7} sm={12}>
                     <div className="js-editor-window">
@@ -81,16 +82,14 @@ export default class JSEditor extends React.Component {
                                     (function() {
                                         var orgLog = console.log;
                                         var consoleElement = window.parent.document.querySelector('#${this.props.uniqueId}Console');
+                                        consoleElement.innerHTML = '';
                                         console.log = function() {
-                                            var allParameters = '';
                                             var liElement = document.createElement("li");
                                             for (var value of arguments) {
                                                 //orgLog(typeof value);
                                                 if( typeof value === 'object' ) {
-                                                    //allParameters += window.parent.window.getMessage(value);
                                                     liElement.appendChild(window.parent.window.getMessage(value));
                                                 } else {
-                                                    //allParameters +=document.createTextNode(value);
                                                     liElement.appendChild(document.createTextNode(value));
                                                 }
                                             }
@@ -108,21 +107,21 @@ export default class JSEditor extends React.Component {
                         </div>
                         
                         <Editor language="javascript" height={this.props.height} value={this.state.javascript} editorType="JS" 
-                            uniqueId={this.props.uniqueId} onChage={setJavascript}  styleActiveLine={false}>
+                            uniqueId={this.props.uniqueId} onChage={setJavascript} readOnly={!this.state.runMode}  styleActiveLine={false}>
                         </Editor>
                     </div>
                     
                 </Col>
-                <Collapse in={true || this.state.runMode}>
+                <Collapse in={this.state.runMode}>
                 <Col md={5} sm={12}>
                     <iframe id="displayView" srcDoc={this.state.srcDoc} sandbox="allow-scripts allow-same-origin allow-modals"  title="output" frameBorder="0" 
                     width="100%" height="100%" className="d-none"></iframe>
                     <div className="console-window">
                         <div className="console-header">Console 
                             <span className="float-end" style={{ color: "#1DA1F2" }} title="Clear" onClick={() => this.setState( {runMode: false } )} ><RiCloseCircleFill /></span>
-                            <span className="float-end" style={{ color: "#1DA1F2" }} title="Clear" onClick={() => document.querySelector('.console-window ul').innerHTML = ''}><GrClear /></span>
+                            <span className="float-end" style={{ color: "#1DA1F2" }} title="Clear" onClick={() => this.jsConsoleWindow.current.innerHTML = ''}><GrClear /></span>
                         </div>
-                        <ul id={this.props.uniqueId+'Console'}>
+                        <ul ref={this.jsConsoleWindow} id={this.props.uniqueId+'Console'}>
 
                         </ul>
                     </div>
