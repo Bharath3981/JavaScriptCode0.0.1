@@ -47,7 +47,7 @@ export default class JSEditor extends React.Component {
     render() {
         window.getMessage = function(message) {
             return new JSONFormatter(message, 0, {
-                hoverPreviewEnabled: false
+                hoverPreviewEnabled: true
             }).render();
         }
         const setJavascript = ( jsString ) => {

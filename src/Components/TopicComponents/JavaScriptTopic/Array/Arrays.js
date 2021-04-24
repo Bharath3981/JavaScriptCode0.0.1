@@ -1,8 +1,8 @@
-import TopicCard from '../../UtilComponents/TopicCard/TopicCard';
+import TopicCard from '../../../UtilComponents/TopicCard/TopicCard';
 import React from 'react';
 import renderHTML from 'react-render-html';
-import arrayImg from './images/Array.svg';
-import JSEditor from '../../UtilComponents/Editor/JSEditor';
+import arrayImg from '../images/Array.svg';
+import JSEditor from '../../../UtilComponents/Editor/JSEditor';
 import * as Code from './ArrayCodeSnippets';
 class Arrays extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class Arrays extends React.Component {
         {/* Accessing an Array elements */}
         { renderHTML(`<h3><strong>Accessing array elements</strong></h3>
           <p>JavaScript arrays are zero-indexed. The first element of an array is at index&nbsp;<code>0</code>, and the last element is the lenght of the array.</p>`)}
-          <JSEditor value={Code.ACCESSING_ARRAY} uniqueId={'jsAccessingArray'} height='110px'></JSEditor>
+          <JSEditor value={Code.ACCESSING_ARRAY} uniqueId={'jsAccessingArray'} height='190px'></JSEditor>
           {/* <JSEditor value={Code.ACCESSING_ARRAY} uniqueId={'jsCreatingArray'} scriptElement={this.scriptRunContentArea} height='110px'></JSEditor> */}
         {/* <EditorView config={editorConfig}></EditorView> */}
       </TopicCard>

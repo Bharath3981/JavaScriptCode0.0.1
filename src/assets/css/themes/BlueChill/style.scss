@@ -28,8 +28,9 @@ body {
     word-break: break-word;
     .card {
         .card-body {
-            h3 {
+            h5 {
                 color: $theme-active-text-color;
+                font-weight: bold;
             }
         }
     }

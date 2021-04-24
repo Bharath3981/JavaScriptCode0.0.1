@@ -1,13 +1,14 @@
 import {  Switch, Route } from 'react-router-dom';
 import History  from './History';
-import Prototype  from '../JavaScriptTopic/Prototype';
+import Prototype  from './Prototype/Prototype';
 import React from 'react';
 import { AppContext } from '../../../AppContext/AppContext';
 
 import { FaHistory } from 'react-icons/fa';
 import { GrInherit } from 'react-icons/gr';
 import { RiBracketsFill } from 'react-icons/ri';
-import Arrays from './Arrays';
+import Arrays from './Array/Arrays';
+import ArrayMethods from './Array/ArrayMethods';
 
 class JavaScriptTopic extends React.Component {
   static contextType = AppContext;
@@ -29,6 +30,11 @@ class JavaScriptTopic extends React.Component {
             id: 201, 
             label: 'Array', 
             path: 'javascript/arrays',
+          },
+          {
+            id: 202, 
+            label: 'Array Methods', 
+            path: 'javascript/arraymethods',
           }
         ]
       },
@@ -36,7 +42,14 @@ class JavaScriptTopic extends React.Component {
         id: 3, 
         icon: GrInherit, 
         label: 'Prototype', 
-        path: 'javascript/prototype'
+        path: '',
+        subTopics: [
+          {
+            id: 301, 
+            label: 'Prototype', 
+            path: 'javascript/prototype',
+          }
+        ]
       }
     ];
     this.context.setLeftNavMenus(topics);
@@ -47,6 +60,7 @@ class JavaScriptTopic extends React.Component {
       <Switch>
         <Route path="/javascript" exact component={History}></Route>
         <Route path="/javascript/arrays" exact component={Arrays}></Route>
+        <Route path="/javascript/arraymethods" exact component={ArrayMethods}></Route>
         <Route path="/javascript/prototype" exact component={Prototype}></Route>
       </Switch>
     );

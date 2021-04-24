@@ -22,7 +22,7 @@ class TopicCard extends React.Component {
       // </div>
       <Card>
         <Card.Header className="d-flex flex-between-center py-2">
-          <h4 className="mb-0">{this.props.params.title}</h4>
+          <h4 className="mb-0 fw-bold">{this.props.params.title}</h4>
           <div className="dropdown font-sans-serif btn-reveal-trigger">
             <DropDownMenu></DropDownMenu>
           </div>
