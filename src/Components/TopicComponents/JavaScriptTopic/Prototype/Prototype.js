@@ -27,11 +27,11 @@ class Prototype extends React.Component {
 
         {renderHTML(`<code>var obj = new Object();</code>`)}
 
-        <div className="jsc-topic-image"><img alt="Array" src={objectCreateImag} /></div>
+        <div className="jsc-topic-image"><img alt="Creating Object" src={objectCreateImag} /></div>
 
         {renderHTML(`<code>obj.a = 8;`)}
 
-        <div className="jsc-topic-image"><img alt="Array" src={objectWithPropertyImg} /></div>
+        <div className="jsc-topic-image"><img alt="Object with property" src={objectWithPropertyImg} /></div>
       </TopicCard> 
     );
   }
