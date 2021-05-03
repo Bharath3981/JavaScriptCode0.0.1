@@ -9,6 +9,7 @@ import { GrInherit } from 'react-icons/gr';
 import { RiBracketsFill } from 'react-icons/ri';
 import Arrays from './Array/Arrays';
 import ArrayMethods from './Array/ArrayMethods';
+import PrototypeInheritiance from './Prototype/PrototypeInheritiance';
 
 class JavaScriptTopic extends React.Component {
   static contextType = AppContext;
@@ -48,6 +49,10 @@ class JavaScriptTopic extends React.Component {
             id: 301, 
             label: 'Prototype', 
             path: 'javascript/prototype',
+          },{
+            id: 302, 
+            label: 'Inheritance', 
+            path: 'javascript/prototypeinheritance',
           }
         ]
       }
@@ -62,6 +67,7 @@ class JavaScriptTopic extends React.Component {
         <Route path="/javascript/arrays" exact component={Arrays}></Route>
         <Route path="/javascript/arraymethods" exact component={ArrayMethods}></Route>
         <Route path="/javascript/prototype" exact component={Prototype}></Route>
+        <Route path="/javascript/prototypeinheritance" exact component={PrototypeInheritiance}></Route>
       </Switch>
     );
   }
